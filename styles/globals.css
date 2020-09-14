@@ -1,16 +1,48 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
 * {
-  box-sizing: border-box;
+  padding: 0;
+  margin: 0
 }
+
+.header {
+  width: 100%;
+  text-align: center;
+  color: blue
+}
+
+
+.container {
+  min-height: 200px;
+  width: 270px;
+  float: left;
+  
+}
+
+.text-cont {
+  width: 260px;
+  min-height: 100px;
+  background: rgba(90,90,90,0.1);
+  margin: 5px
+}
+
+.text-cont h1 {
+  font-size: 1.2em;
+}
+
+.text-cont img {
+  width: 100%;
+}
+
+main {
+  display: block;
+  background: rgba(190,190,190,0.5);
+  min-height: 100vh;
+  width: 100%
+}
+
+
+/* <div className="container">
+  <div className="text-cont">
+    <h1>Title</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste eos inventore nesciunt ad culpa error sapiente, quo necessitatibus natus. Laudantium?</p>
+  </div>
+</div> */
