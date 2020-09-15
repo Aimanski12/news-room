@@ -14,7 +14,7 @@ export default function Home() {
   useEffect(() => {
     if(!data.isSet){
       async function gData() {
-        let results = await getData()
+        let results = await getData('sports')
         setData({
           isSet: true,
           data: {...results}
@@ -37,6 +37,10 @@ export default function Home() {
   //   ) 
   // }) : null
 
+
+  const time = new Date().toLocaleDateString()
+  console.log(time)
+
   return (
     <div className=''>
       <Head>
@@ -47,21 +51,27 @@ export default function Home() {
       <main>
         { data.isSet ? 
           <Fragment>
-            <Items 
+            {/* <Items 
               header='Wildlife'
-              data={data.data.environment.a1} />
+              data={data.data.item1} />
             <Items 
               header='Marine Life'
-              data={data.data.environment.b1} />
+              data={data.data.item2} />
             <Items 
               header='Climate Change'
-              data={data.data.environment.c1} />
+              data={data.data.item3} />
             <Items 
               header='farming'
-              data={data.data.environment.d1} />
+              data={data.data.item4} />
             <Items 
               header='Fossils'
-              data={data.data.environment.e1} />
+              data={data.data.item5} />
+            <Items 
+              header='farming'
+              data={data.data.item6} /> */}
+            {/* <Items 
+              header='Fossils'
+              data={data.data.item7} /> */}
             {/* <Items 
               header='Technology'
               data={data.data.technology} />
