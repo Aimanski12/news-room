@@ -12,6 +12,7 @@
     "guardian-js": "^3.0.0",
     "html-react-parser": "^0.14.0",
     "lodash": "^4.17.20",
+    "moment": "^2.28.0",
     "next": "9.5.3",
     "react": "16.13.1",
     "react-dom": "16.13.1"

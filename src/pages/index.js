@@ -14,7 +14,7 @@ export default function Home() {
   useEffect(() => {
     if(!data.isSet){
       async function gData() {
-        let results = await getData('sports')
+        let results = await getData('art')
         setData({
           isSet: true,
           data: {...results}
@@ -38,8 +38,7 @@ export default function Home() {
   // }) : null
 
 
-  const time = new Date().toLocaleDateString()
-  console.log(time)
+  // getData()
 
   return (
     <div className=''>
@@ -51,7 +50,8 @@ export default function Home() {
       <main>
         { data.isSet ? 
           <Fragment>
-            {/* <Items 
+          
+            <Items 
               header='Wildlife'
               data={data.data.item1} />
             <Items 
@@ -63,10 +63,10 @@ export default function Home() {
             <Items 
               header='farming'
               data={data.data.item4} />
-            <Items 
+            {/* <Items 
               header='Fossils'
-              data={data.data.item5} />
-            <Items 
+              data={data.data.item5} /> */}
+            {/* <Items 
               header='farming'
               data={data.data.item6} /> */}
             {/* <Items 

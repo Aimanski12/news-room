@@ -11,18 +11,7 @@ export async function newsData(path) {
   return data
 }
 
-// function for the new page data fetch
-export async function newsByDate(path, date) {
-  const url = `${qurl}${path}&${date}&${filters}&${api}&page=1`
-  let data = await getdata(url)
-  return data
-}
-
-
-
-
-
-
+// get data from the api
 async function getdata(url){
   let data;
   await axios.get(url)
