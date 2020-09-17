@@ -12,7 +12,6 @@ export async function sports() {
   const tennis = await newsData(`${a}sport/tennis`)
   const golf = await newsData(`${a}sport/golf`)
   const world = await newsData(`${r}world&tag=sport/sport`)
-  
   return sortData(headline, soccer, nba, tennis, golf, world)
 }
 
@@ -50,5 +49,6 @@ async function getData(r) {
   const recent = await newsData(`${r}`)
   const lastmonth = await newsData(`${r}&${_time('lastmonth')}`)
   const prevmonth = await newsData(`${r}&${_time('prevmonth')}`)
+  
   return sortData(recent, lastmonth, prevmonth)
 }

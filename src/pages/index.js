@@ -1,9 +1,9 @@
-import React, {useEffect, useState, Fragment} from 'react'
+import React, {useEffect, useState} from 'react'
 import Head from 'next/head'
-import parse from 'html-react-parser'
 import {getData} from '../utils/api/apis'
-import Items from '../components/news'
+import LayoutOne from '../components/Layouts/LayoutOne'
 
+// import parse from 'html-react-parser'
 export default function Home() {
 
   const [data, setData] = useState({
@@ -14,7 +14,7 @@ export default function Home() {
   useEffect(() => {
     if(!data.isSet){
       async function gData() {
-        let results = await getData('art')
+        let results = await getData('sportAll')
         setData({
           isSet: true,
           data: {...results}
@@ -39,63 +39,33 @@ export default function Home() {
 
 
   // getData()
+  console.log(data.data)
 
   return (
-    <div className=''>
+    <div className='main-container'>
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
-        { data.isSet ? 
-          <Fragment>
-          
-            <Items 
-              header='Wildlife'
-              data={data.data.item1} />
-            <Items 
-              header='Marine Life'
-              data={data.data.item2} />
-            <Items 
-              header='Climate Change'
-              data={data.data.item3} />
-            <Items 
-              header='farming'
-              data={data.data.item4} />
-            {/* <Items 
-              header='Fossils'
-              data={data.data.item5} /> */}
-            {/* <Items 
-              header='farming'
-              data={data.data.item6} /> */}
-            {/* <Items 
-              header='Fossils'
-              data={data.data.item7} /> */}
-            {/* <Items 
-              header='Technology'
-              data={data.data.technology} />
-            <Items 
-              header='Science'
-              data={data.data.science} />
-            <Items 
-              header='Politics'
-              data={data.data.politics} />
-            <Items 
-              header='Opinion'
-              data={data.data.opinion} />
-            <Items 
-              header='World'
-              data={data.data.world} />
-            <Items 
-              header='Environment'
-              data={data.data.environment} /> */}
-
-          </Fragment> : null
-
-        }
-        
+      <header className='content-center'>
+        <div className="content-center header-wrapper">
+          <h1 className="">Header</h1>
+        </div>
+      </header>
+      <main className='content-center news-body'>
+        <div className="content-center body-container">
+          <LayoutOne />
+          <h1>Body</h1>
+        </div>
       </main>
+
+      <footer className='content-center'>
+        <div className="content-center footer-wrapper">
+          <h1>Footer</h1>
+        </div>
+
+      </footer>
     </div>
   )
 }

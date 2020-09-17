@@ -1,0 +1,18 @@
+
+.news-body {
+  width: 100%;
+  min-height: 500px;
+  background: rgba(190,190,190,0.1);
+}
+
+.body-container {
+  width: 1300px;
+  min-height: 500px;
+  /* background: rgba(190,190,190,0.5); */
+}
+
+@media (max-width: 1320px){
+  .body-container {
+    width: 100%;
+  }
+}
