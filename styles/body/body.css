@@ -2,7 +2,7 @@
 .news-body {
   width: 100%;
   min-height: 500px;
-  background: rgba(190,190,190,0.1);
+  /* background: rgba(190,190,190,0.1); */
 }
 
 .body-container {

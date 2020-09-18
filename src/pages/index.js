@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react'
 import Head from 'next/head'
 import {getData} from '../utils/api/apis'
 import LayoutOne from '../components/Layouts/LayoutOne'
+import LayoutTwo from '../components/Layouts/LayoutTwo'
 
 // import parse from 'html-react-parser'
 export default function Home() {
@@ -14,7 +15,7 @@ export default function Home() {
   useEffect(() => {
     if(!data.isSet){
       async function gData() {
-        let results = await getData('sportAll')
+        let results = await getData('world')
         setData({
           isSet: true,
           data: {...results}
@@ -55,8 +56,8 @@ export default function Home() {
       </header>
       <main className='content-center news-body'>
         <div className="content-center body-container">
-          <LayoutOne />
-          <h1>Body</h1>
+          <LayoutOne data={data.data.item1}/>
+          <LayoutTwo data={data.data.item2}/>
         </div>
       </main>
 

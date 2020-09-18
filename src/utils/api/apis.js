@@ -6,15 +6,7 @@ import {lifestyleall, lifestyle, fashion, books, food, travel} from './lifestyle
 import {filmAll, film, media, stage, music} from './films'
 import {cultureAll, culture, society, art} from './culture'
 
-
-import {newsData} from './fetchApi'
-
 export async function getData(endpoint){
-
-  // let data = await newsByDate('section=sport&tag=sport/basketball','from-date=2020-08-01')
-  // let data = await newsData('section=money')
-  // console.log(data)
-  
 
   let data;
   switch(endpoint) {
@@ -104,7 +96,6 @@ export async function getData(endpoint){
       break
     case 'art': data = await art();
       break
-
   }
   
   return data
