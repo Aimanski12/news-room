@@ -5,8 +5,8 @@
   width: 100%;
   min-height: 495px;
   background: white;
-  color: #1E619E;
-  padding: 15px 0px
+  padding: 15px 0px;
+  border-top: 1px solid gray
 }
 
 .layout-one .left {
@@ -14,7 +14,15 @@
   min-height: 250px;
   margin-right: 8px;
   padding: 0 5px;
-  background: lightblue;
+}
+
+.layout-one .left a {
+  color: none;
+  text-decoration: none;
+}
+
+.layout-one .left a:hover {
+  text-decoration: underline;
 }
 
 .layout-one .left h2{
@@ -24,7 +32,6 @@
 .layout-one .news-layout {
   width: 1076px;
   min-height: 360px;
-  background: rgba(240,240,240,0.5);
 }
 
 .layout-one .layout-wrapper {
@@ -36,9 +43,10 @@
 
 .layout-one .news-item {
   padding: 8px;
-  background: rgba(190,190,190,0.5);
   min-height: 200px;
+  transition: all 0.3s ease-in;
 }
+
 
 .layout-one .news-item p {
   font-weight: 500;
@@ -61,8 +69,6 @@
   grid-column-end: 4;
   grid-row-start: 1;
   grid-row-end: 3;
-  background: #1E619E;
-  color: white
 }
 
 .layout-one .item-1 img {
@@ -99,7 +105,7 @@
     width: 170px;
   }
   .layout-one .news-layout {
-    width: 1007px;
+    width: 1022px;
   }
   .layout-one .layout-wrapper {
     grid-template-columns: 251.75px 251.75px 251.75px 251.75px;
@@ -114,7 +120,7 @@
     width: 160px;
   }
   .layout-one .news-layout {
-    width: 917px;
+    width: 932px;
   }
   .layout-one .layout-wrapper {
     grid-template-columns: 229.25px 229.25px 229.25px 229.25px;
@@ -126,7 +132,7 @@
     width: 150px;
   }
   .layout-one .news-layout {
-    width: 827px;
+    width: 842px;
   }
   .layout-one .layout-wrapper {
     grid-template-columns: 206.75px 206.75px 206.75px 206.75px;
@@ -173,10 +179,7 @@
 
 
 @media (max-width: 968px) {
-  .layout-one .left {
-    width: 800px;
-  }
-  .layout-one .news-layout {
+  .layout-one .left, .layout-one .news-layout {
     width: 800px;
   }
   .layout-one .layout-wrapper {
@@ -188,10 +191,7 @@
 }
 
 @media (max-width: 868px) {
-  .layout-one .left {
-    width: 700px;
-  }
-  .layout-one .news-layout {
+  .layout-one .left, .layout-one .news-layout {
     width: 700px;
   }
   .layout-one .layout-wrapper {
@@ -204,10 +204,7 @@
 
 
 @media (max-width: 768px) {
-  .layout-one .left {
-    width: 600px;
-  }
-  .layout-one .news-layout {
+  .layout-one .left, .layout-one .news-layout {
     width: 600px;
   }
   .layout-one .layout-wrapper {
@@ -254,10 +251,7 @@
 
 
 @media (max-width: 668px) {
-  .layout-one .left {
-    width: 500px;
-  }
-  .layout-one .news-layout {
+  .layout-one .left, .layout-one .news-layout {
     width: 500px;
   }
   .layout-one .news-item, .layout-one .item-2 {
@@ -269,10 +263,7 @@
 }
 
 @media (max-width: 568px) {
-  .layout-one .left {
-    width: 400px;
-  }
-  .layout-one .news-layout {
+  .layout-one .left, .layout-one .news-layout {
     width: 400px;
   }
   .layout-one .news-item, .layout-one .item-2 {
@@ -284,10 +275,7 @@
 }
 
 @media (max-width: 468px) {
-  .layout-one .left {
-    width: 380px;
-  }
-  .layout-one .news-layout {
+  .layout-one .left, .layout-one .news-layout {
     width: 380px;
   }
   .layout-one .item-1 {
@@ -296,10 +284,7 @@
 }
 
 @media (max-width: 400px) {
-  .layout-one .left {
-    width: 320px;
-  }
-  .layout-one .news-layout {
+  .layout-one .left, .layout-one .news-layout {
     width: 320px;
   }
   .layout-one .item-1 {
@@ -308,10 +293,7 @@
 }
 
 @media (max-width: 340px) {
-  .layout-one .left {
-    width: 290px;
-  }
-  .layout-one .news-layout {
+  .layout-one .left, .layout-one .news-layout {
     width: 290px;
   }
   .layout-one .item-1 {

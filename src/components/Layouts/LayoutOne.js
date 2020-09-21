@@ -1,21 +1,20 @@
 import React from 'react'
+import Link from '../Link/Link'
+import parse from 'html-react-parser'
 
 function LayoutOne(props) {
   let data = props.data ? props.data : null
-  console.log(data)
-  
 
-  let item1 = data ? (
+  let item1 = data[0] ? (
     <div className="news-item item-1">
       <img src={data[0].fields.thumbnail} alt=""/>
       <div className="text-wrapper">
         <p className="display-3 text-head">{data[0].webTitle}</p>
-        <span className='display-9 text-head'>{data[0].fields.trailText}</span>
-        {/* <span className='display-9 text-head'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus repellat quam odio quia porro! Veniam sit aliquam quod dolore, odit illum culpa? </span> */}
+        <span className='display-9 text-head'>{parse(data[0].fields.trailText)}</span>
       </div>
     </div> ) : null
   
-  let item2 = data ? (
+  let item2 = data[1] ? (
     <div className="news-item item-2">
       <img src={data[1].fields.thumbnail} alt=""/>
       <div className="text-wrapper">
@@ -23,7 +22,7 @@ function LayoutOne(props) {
       </div>
     </div> ) : null
 
-  let item3 = data ? (
+  let item3 = data[2] ? (
     <div className="news-item item-3">
       <img src={data[2].fields.thumbnail} alt=""/>
       <div className="text-wrapper">
@@ -31,7 +30,7 @@ function LayoutOne(props) {
       </div>
     </div> ) : null
 
-  let item4 = data ? (
+  let item4 = data[3] ? (
     <div className="news-item item-4">
       <img src={data[3].fields.thumbnail} alt=""/>
       <div className="text-wrapper">
@@ -39,7 +38,7 @@ function LayoutOne(props) {
       </div>
     </div> ) : null
 
-  let item5 = data ? (
+  let item5 = data[4] ? (
     <div className="news-item item-5">
       <img src={data[4].fields.thumbnail} alt=""/>
       <div className="text-wrapper">
@@ -47,7 +46,7 @@ function LayoutOne(props) {
       </div>
     </div> ) : null
 
-  let item6 = data ? (
+  let item6 = data[5] ? (
     <div className="news-item item-6">
       <img src={data[5].fields.thumbnail} alt=""/>
       <div className="text-wrapper">
@@ -56,10 +55,10 @@ function LayoutOne(props) {
     </div> ) : null
 
   return (
-    <div className="content-center layout-one">
-      <div className='left'>
-        <h2 className='display-4 text-head'>Headlines</h2>
-      </div>
+    <div className={`content-center layout-one ${props.theme}`}>
+      <Link 
+        textHeader={props.textHeader}
+        link={props.link}/>
       <div className="news-layout">
         <div className="layout-wrapper">
           {item1}

@@ -1,0 +1,41 @@
+
+
+
+
+.theme-three-a .left a,
+.theme-three-b .left a,
+.theme-three-a .left,
+.theme-three-b .left {
+  color:#CD8949
+}
+
+.theme-three-a .news-item, .theme-three-b .news-item {
+  background: #EDEDED;
+  color:#CD8949;
+}
+
+.theme-three-a .news-item:hover, .theme-three-b .news-item:hover {
+  background: #F6F6F6;
+  transition: all 0.3s ease-in;
+}
+
+.theme-three-a .item-1, .theme-three-a .item-2 {
+  background: #CD8949;
+  color: #FFFFFF;
+}
+
+.theme-three-a .item-1:hover, .theme-three-a .item-2:hover{
+  background: #CF9762;
+  transition: all 0.3s ease-in;
+}
+
+/* theme one B */
+.theme-three-b .item-1, .theme-three-b .item-2 {
+  background: #EDEDED;
+  color:#CD8949;
+}
+
+.theme-three-b .item-1:hover, .theme-three-b .item-2:hover{
+  background: #F6F6F6;
+  transition: all 0.3s ease-in;
+}

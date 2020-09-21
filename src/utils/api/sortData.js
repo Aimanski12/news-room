@@ -61,6 +61,6 @@ function check(i, a){
 // filter data to 5 items
 function filterTo5(data){
   return data.filter((d, i) => {
-    if(i<6) return d
+    if(i<8) return d
   })
 }

@@ -9,10 +9,10 @@ export async function sports() {
   const headline = await newsData(`${r}sport`)
   const soccer = await newsData(`${r}football`)
   const nba = await newsData(`${a}sport/nba`)
-  const tennis = await newsData(`${a}sport/tennis`)
   const golf = await newsData(`${a}sport/golf`)
-  const world = await newsData(`${r}world&tag=sport/sport`)
-  return sortData(headline, soccer, nba, tennis, golf, world)
+  const tennis = await newsData(`${a}sport/tennis`)
+  const mlb = await newsData(`${a}sport/mlb`)
+  return sortData(headline, soccer, nba, tennis, golf, mlb)
 }
 
 export async function sport() {

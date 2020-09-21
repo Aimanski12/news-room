@@ -33,7 +33,6 @@ export async function art() {
   const photo = await newsData(`${r}${a}photography`)
   const exhibit = await newsData(`${r}${a}exhibition`)
   const society = await newsData(`${r}`)
-  console.log(photo)
   return sortData(photo, exhibit, society)
 }
 

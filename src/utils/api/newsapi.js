@@ -8,7 +8,7 @@ export async function envi(){
   const climatechange = await newsData(`${route}&tag=environment/climate-change`)
   const farming = await newsData(`${route}&tag=environment/farming`)
   const fossilfuels = await newsData(`${route}&tag=environment/fossil-fuels`)
-  return sortData(wildlife, marinelife, climatechange, farming, fossilfuels, false, false)
+  return sortData(wildlife, marinelife, climatechange, farming, fossilfuels)
 }
 
 export async function tech() {
@@ -57,21 +57,19 @@ export async function edu() {
   let r = 'section=education&tag=education/'
   const univ = await newsData(`${r}universities`)
   const stud = await newsData(`${r}students`)
-  const hEdu = await newsData(`${r}higher-education`)
   const fresh = await newsData(`${r}freshers`)
   const med = await newsData(`section=science&tag=science/medical-research`)
-  return sortData(univ, fresh, stud, hEdu, med)
+  return sortData(univ, fresh, stud, med)
 }
 
 export async function main() {
   let r = 'section='
-  const usnews = await newsData(`${r}us-news`)
   const world = await newsData(`{r}world&tag=world/coronavirus-outbreak`)
   const politics = await newsData(`${r}politics`)
   const envi = await newsData(`${r}environment`)
   const tech = await newsData(`${r}technology`)
   const science = await newsData(`${r}science`)
   const edu = await newsData(`${r}education`)
-  return sortData(usnews, world, politics, envi, tech, science, edu)
+  return sortData(world, politics, envi, tech, science, edu)
 }
 

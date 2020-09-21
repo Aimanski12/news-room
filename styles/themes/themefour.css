@@ -1,0 +1,40 @@
+
+
+
+.theme-four-a .left a,
+.theme-four-b .left a,
+.theme-four-a .left,
+.theme-four-b .left {
+  color:#BF41BF
+}
+
+.theme-four-a .news-item, .theme-four-b .news-item {
+  background: #EDEDED;
+  color:#BF41BF;
+}
+
+.theme-four-a .news-item:hover, .theme-four-b .news-item:hover {
+  background: #F6F6F6;
+  transition: all 0.3s ease-in;
+}
+
+.theme-four-a .item-1, .theme-four-a .item-2 {
+  background: #BF41BF;
+  color: #FFFFFF;
+}
+
+.theme-four-a .item-1:hover, .theme-four-a .item-2:hover{
+  background: #C867C8;
+  transition: all 0.3s ease-in;
+}
+
+/* theme one B */
+.theme-four-b .item-1, .theme-four-b .item-2 {
+  background: #EDEDED;
+  color:#BF41BF;
+}
+
+.theme-four-b .item-1:hover, .theme-four-b .item-2:hover{
+  background: #F6F6F6;
+  transition: all 0.3s ease-in;
+}

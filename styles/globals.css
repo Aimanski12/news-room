@@ -18,3 +18,18 @@ body {
   align-items: center;
   justify-content: center;
 }
+
+.timer {
+  width: 100%;
+  text-align: right;
+  color: #A8A8A8
+}
+.clock-svg {
+  width: 12px;
+  margin-right: 3px;
+  color: #BCBCBC
+}
+
+.news-item:hover {
+  cursor: pointer;
+}

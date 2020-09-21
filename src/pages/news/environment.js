@@ -1,12 +1,11 @@
 import React, {useEffect, useState, Fragment} from 'react'
 import Head from 'next/head'
-import {getData} from '../utils/api/apis'
-import LayoutOne from '../components/Layouts/LayoutOne'
-import LayoutTwo from '../components/Layouts/LayoutTwo'
-import LayoutThree from '../components/Layouts/LayoutThree'
-import LayoutFour from '../components/Layouts/LayoutFour'
-import LayoutFive from '../components/Layouts/LayoutFive'
-import LayoutSix from '../components/Layouts/LayoutSix'
+import {getData} from '../../utils/api/apis'
+import LayoutOne from '../../components/Layouts/LayoutOne'
+import LayoutTwo from '../../components/Layouts/LayoutTwo'
+import LayoutThree from '../../components/Layouts/LayoutThree'
+import LayoutFour from '../../components/Layouts/LayoutFour'
+import LayoutFive from '../../components/Layouts/LayoutFive'
 
 // import parse from 'html-react-parser'
 export default function Home() {
@@ -19,7 +18,7 @@ export default function Home() {
   useEffect(() => {
     if(!data.isSet){
       async function gData() {
-        let results = await getData('main')
+        let results = await getData('envi')
         setData({
           isSet: true,
           data: {...results}
@@ -33,7 +32,7 @@ export default function Home() {
   return (
     <div className='main-container'>
       <Head>
-        <title>News-Box | News</title>
+        <title>News-Box | Environment</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -47,36 +46,31 @@ export default function Home() {
           {
             data.isSet ? (
               <Fragment>
+                <LayoutThree 
+                  theme='theme-four-a'
+                  link={false}
+                  textHeader='Climate Change'
+                  data={data.data.item3}/>
                 <LayoutOne 
-                  link='/news/covid-19'
-                  theme='theme-two-a'
-                  textHeader='Covid-19'
+                  link={false}
+                  theme='theme-one-b'
+                  textHeader='Wildlife'
                   data={data.data.item1}/>
                 <LayoutTwo 
-                  theme='theme-three-a'
-                  link='/news/politics'
-                  textHeader='Politics'
+                  theme='theme-three-b'
+                  link={false}
+                  textHeader='Marine Life'
                   data={data.data.item2}/>
-                <LayoutThree 
-                  theme='theme-four-b'
-                  link='/news/environment'
-                  textHeader='Environment'
-                  data={data.data.item3}/>
                 <LayoutFour 
                   theme='theme-five-b'
-                  link='/news/technology'
-                  textHeader='Technology'
+                  link={false}
+                  textHeader='Farming'
                   data={data.data.item4}/>
                 <LayoutFive 
                   theme='theme-three-a'
-                  link='/news/science'
-                  textHeader='Science'
+                  link={false}
+                  textHeader='Fossil Fuels'
                   data={data.data.item5}/>
-                <LayoutSix 
-                  theme='theme-five-b'
-                  link='/news/education'
-                  textHeader='Education'
-                  data={data.data.item6}/>
               </Fragment>
             ) : null
           }

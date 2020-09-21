@@ -1,0 +1,40 @@
+
+
+
+.theme-five-a .left a,
+.theme-five-b .left a,
+.theme-five-a .left,
+.theme-five-b .left {
+  color:#838383
+}
+
+.theme-five-a .news-item, .theme-five-b .news-item {
+  background: #EDEDED;
+  color:#838383;
+}
+
+.theme-five-a .news-item:hover, .theme-five-b .news-item:hover {
+  background: #F6F6F6;
+  transition: all 0.3s ease-in;
+}
+
+.theme-five-a .item-1, .theme-five-a .item-2 {
+  background: #838383;
+  color: #FFFFFF;
+}
+
+.theme-five-a .item-1:hover, .theme-five-a .item-2:hover{
+  background: #ACACAC;
+  transition: all 0.3s ease-in;
+}
+
+/* theme one B */
+.theme-five-b .item-1, .theme-five-b .item-2 {
+  background: #EDEDED;
+  color:#838383;
+}
+
+.theme-five-b .item-1:hover, .theme-five-b .item-2:hover{
+  background: #F6F6F6;
+  transition: all 0.3s ease-in;
+}
