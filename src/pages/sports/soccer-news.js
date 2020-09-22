@@ -3,12 +3,9 @@ import Head from 'next/head'
 import {getData} from '../../utils/api/apis'
 import LayoutTwo from '../../components/Layouts/LayoutTwo'
 import LayoutOne from '../../components/Layouts/LayoutOne'
-import LayoutFour from '../../components/Layouts/LayoutFour'
 import LayoutFive from '../../components/Layouts/LayoutFive'
-import LayoutSix from '../../components/Layouts/LayoutSix'
 
-// import parse from 'html-react-parser'
-export default function Home() {
+export default function Soccer() {
 
   const [data, setData] = useState({
     isSet: false,
@@ -18,7 +15,7 @@ export default function Home() {
   useEffect(() => {
     if(!data.isSet){
       async function gData() {
-        let results = await getData('sportAll')
+        let results = await getData('football')
         setData({
           isSet: true,
           data: {...results}
@@ -31,7 +28,7 @@ export default function Home() {
   return (
     <div className='main-container'>
       <Head>
-        <title>News-Box | Sports</title>
+        <title>News-Box | Soccer News</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -45,31 +42,21 @@ export default function Home() {
           {
             data.isSet ? (
               <Fragment>
-                <LayoutFour 
+                <LayoutFive
                   link={false}
-                  theme='theme-five-b'
-                  textHeader='Soccer'
-                  data={data.data.item1}/>
-                <LayoutSix 
                   theme='theme-one-b'
+                  textHeader='This Month'
+                  data={data.data.item1}/>
+                <LayoutOne
+                  theme='theme-two-b'
                   link={false}
-                  textHeader='NBA'
+                  textHeader='Last Month'
                   data={data.data.item2}/>
-                <LayoutFive 
-                  theme='theme-two-a'
-                  link={false}
-                  textHeader='Tennis'
-                  data={data.data.item3}/>
-                <LayoutOne 
-                  theme='theme-thee-b'
-                  link={false}
-                  textHeader='Golf'
-                  data={data.data.item4}/>
                 <LayoutTwo 
-                  theme='theme-four-b'
+                  theme='theme-three-a'
                   link={false}
-                  textHeader='Baseball'
-                  data={data.data.item5}/>
+                  textHeader='Previews Month'
+                  data={data.data.item3}/>
               </Fragment>
             ) : null
           }

@@ -1,0 +1,471 @@
+
+
+
+.footer-logo {
+  width: 519px;
+  min-height: 440px;
+  float: right;
+  background: orangered;
+  background: rgba(240,240,240, 0.1);
+}
+
+.footer-logo img {
+  width: 55%;
+}
+
+.text-saying {
+  color: #DAC71B;
+  font-weight: 500;
+  margin: 15px 0 20px 0
+}
+
+.text-credit{
+  margin-bottom: 20px
+}
+
+.text-credit span{
+  display: block;
+  line-height: 25px;
+  text-align: center;
+  color: #CFDDF2;
+  
+}
+
+.text-credit span a{
+  text-decoration: none;
+  color: orangered
+}
+
+.text-credit span a:hover, .text-developer span a:hover{
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.text-developer span{
+  text-align: center;
+  width: 100%;
+  letter-spacing: -0.15px;
+  font-weight: 500;
+  display: block;
+  color: #CFDDF2;
+}
+
+.text-developer span a{
+  margin-left: 5px;
+  text-decoration: none;
+  color: #DAC71B;
+}
+
+@media(max-width: 1368px) {
+  .footer-logo {
+    width: 469px;
+   
+    min-height: 440px;
+    float: right;
+    background: orangered;
+    background: rgba(240, 240, 240, 0.1);
+  }
+
+  .footer-logo img {
+   
+    width: 55%;
+  }
+
+  .text-saying {
+   
+    color: #DAC71B;
+    font-weight: 500;
+    margin: 15px 0 20px 0
+  }
+
+  .text-credit {
+   
+    margin-bottom: 20px
+  }
+
+  .text-credit span {
+   
+    display: block;
+    line-height: 25px;
+    text-align: center;
+    color: #CFDDF2;
+  }
+
+  .text-credit span a {
+
+    text-decoration: none;
+    color: orangered
+  }
+
+  .text-credit span a:hover, .text-developer span a:hover {
+    
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  .text-developer span {
+    
+    text-align: center;
+    width: 100%;
+    letter-spacing: -0.15px;
+    font-weight: 500;
+    display: block;
+    color: #CFDDF2;
+  }
+
+  .text-developer span a {
+    
+    margin-left: 5px;
+    text-decoration: none;
+    color: #DAC71B;
+  }
+}
+
+
+
+
+
+
+@media(max-width: 1268px) {
+  .footer-logo {
+    width: 419px;
+   
+    min-height: 440px;
+    float: right;
+    background: orangered;
+    background: rgba(240, 240, 240, 0.1);
+  }
+
+  .footer-logo img {
+    width: 60%;
+   
+  }
+
+  .text-saying {
+   
+    color: #DAC71B;
+    font-weight: 500;
+    margin: 15px 0 20px 0
+  }
+
+  .text-credit {
+   
+    margin-bottom: 20px
+  }
+
+  .text-credit span {
+   
+    display: block;
+    line-height: 25px;
+    text-align: center;
+    color: #CFDDF2;
+  }
+
+  .text-credit span a {
+
+    text-decoration: none;
+    color: orangered
+  }
+
+  .text-credit span a:hover, .text-developer span a:hover {
+    
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  .text-developer span {
+    
+    text-align: center;
+    width: 100%;
+    letter-spacing: -0.15px;
+    font-weight: 500;
+    display: block;
+    color: #CFDDF2;
+  }
+
+  .text-developer span a {
+    
+    margin-left: 5px;
+    text-decoration: none;
+    color: #DAC71B;
+  }
+}
+
+
+
+
+
+@media(max-width: 1168px) {
+  .footer-logo {
+    width: 380px;
+    
+    min-height: 440px;
+    float: right;
+    background: orangered;
+    background: rgba(240, 240, 240, 0.1);
+  }
+
+  .footer-logo img {
+    
+    width: 60%;
+  }
+
+  .text-saying {
+
+    color: #DAC71B;
+    font-weight: 500;
+    margin: 15px 0 20px 0
+  }
+
+  .text-credit {
+
+    margin-bottom: 20px
+  }
+
+  .text-credit span {
+
+    display: block;
+    line-height: 25px;
+    text-align: center;
+    color: #CFDDF2;
+  }
+
+  .text-credit span a {
+
+    text-decoration: none;
+    color: orangered
+  }
+
+  .text-credit span a:hover,
+  .text-developer span a:hover {
+
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  .text-developer span {
+
+    text-align: center;
+    width: 100%;
+    letter-spacing: -0.15px;
+    font-weight: 500;
+    display: block;
+    color: #CFDDF2;
+  }
+
+  .text-developer span a {
+
+    margin-left: 5px;
+    text-decoration: none;
+    color: #DAC71B;
+  }
+}
+
+
+
+
+
+@media(max-width: 1068px) {
+  .footer-logo {
+    width: 340px;
+
+    min-height: 440px;
+    float: right;
+    background: orangered;
+    background: rgba(240, 240, 240, 0.1);
+  }
+
+  .footer-logo img {
+
+    width: 60%;
+  }
+
+  .text-saying {
+
+    color: #DAC71B;
+    font-weight: 500;
+    margin: 15px 0 20px 0
+  }
+
+  .text-credit {
+
+    margin-bottom: 20px
+  }
+
+  .text-credit span {
+
+    display: block;
+    line-height: 25px;
+    text-align: center;
+    color: #CFDDF2;
+  }
+
+  .text-credit span a {
+
+    text-decoration: none;
+    color: orangered
+  }
+
+  .text-credit span a:hover,
+  .text-developer span a:hover {
+
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  .text-developer span {
+
+    text-align: center;
+    width: 100%;
+    letter-spacing: -0.15px;
+    font-weight: 500;
+    display: block;
+    color: #CFDDF2;
+  }
+
+  .text-developer span a {
+
+    margin-left: 5px;
+    text-decoration: none;
+    color: #DAC71B;
+  }
+}
+
+
+
+@media(max-width: 968px) {
+  .footer-logo {
+    
+    width: 340px;
+    min-height: 440px;
+    float: right;
+    background: orangered;
+    background: rgba(240, 240, 240, 0.1);
+  }
+
+  .footer-logo img {
+
+    width: 60%;
+  }
+
+  .text-saying {
+
+    color: #DAC71B;
+    font-weight: 500;
+    margin: 15px 0 20px 0
+  }
+
+  .text-credit {
+
+    margin-bottom: 20px
+  }
+
+  .text-credit span {
+
+    display: block;
+    line-height: 25px;
+    text-align: center;
+    color: #CFDDF2;
+  }
+
+  .text-credit span a {
+
+    text-decoration: none;
+    color: orangered
+  }
+
+  .text-credit span a:hover,
+  .text-developer span a:hover {
+
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  .text-developer span {
+
+    text-align: center;
+    width: 100%;
+    letter-spacing: -0.15px;
+    font-weight: 500;
+    display: block;
+    color: #CFDDF2;
+  }
+
+  .text-developer span a {
+
+    margin-left: 5px;
+    text-decoration: none;
+    color: #DAC71B;
+  }
+}
+
+
+
+
+
+
+@media(max-width: 868px) {
+  .footer-logo {
+    min-height: 760px;
+
+    width: 340px;
+    float: right;
+    background: orangered;
+    background: rgba(240, 240, 240, 0.1);
+  }
+
+  .footer-logo img {
+
+    width: 60%;
+  }
+
+  .text-saying {
+
+    color: #DAC71B;
+    font-weight: 500;
+    margin: 15px 0 20px 0
+  }
+
+  .text-credit {
+
+    margin-bottom: 20px
+  }
+
+  .text-credit span {
+
+    display: block;
+    line-height: 25px;
+    text-align: center;
+    color: #CFDDF2;
+  }
+
+  .text-credit span a {
+
+    text-decoration: none;
+    color: orangered
+  }
+
+  .text-credit span a:hover,
+  .text-developer span a:hover {
+
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  .text-developer span {
+
+    text-align: center;
+    width: 100%;
+    letter-spacing: -0.15px;
+    font-weight: 500;
+    display: block;
+    color: #CFDDF2;
+  }
+
+  .text-developer span a {
+
+    margin-left: 5px;
+    text-decoration: none;
+    color: #DAC71B;
+  }
+}

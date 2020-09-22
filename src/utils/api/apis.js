@@ -1,6 +1,6 @@
 import {envi, main,tech, science, edu, covid, politics} from './newsapi'
 import {world, usnews, uknews, ausnews, asia, amnews, africa, europe} from './worldapi'
-import {sports, sport, football, basketball, baseball, golf, tennis} from './sports'
+import {sports, football, basketball, baseball, golf, tennis} from './sports'
 import {moneyall, money, business, investment, realestate, work} from './moneydata'
 import {lifestyleall, lifestyle, fashion, books, food, travel} from './lifestyle'
 import {filmAll, film, media, stage, music} from './films'
@@ -41,8 +41,6 @@ export async function getData(endpoint){
     case 'amnews': data = await amnews();
       break
     case 'sportAll': data = await sports();
-      break
-    case 'sports': data = await sport();
       break
     case 'football': data = await football();
       break

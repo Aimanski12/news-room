@@ -7,6 +7,7 @@ import LayoutThree from '../components/Layouts/LayoutThree'
 import LayoutFour from '../components/Layouts/LayoutFour'
 import LayoutFive from '../components/Layouts/LayoutFive'
 import LayoutSix from '../components/Layouts/LayoutSix'
+import Footer from '../components/Footer/Footer'
 
 // import parse from 'html-react-parser'
 export default function Home() {
@@ -83,12 +84,7 @@ export default function Home() {
         </div>
       </main>
 
-      <footer className='content-center'>
-        <div className="content-center footer-wrapper">
-          <h1>Footer</h1>
-        </div>
-
-      </footer>
+      <Footer />
     </div>
   )
 }

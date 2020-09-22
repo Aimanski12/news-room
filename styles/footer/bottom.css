@@ -1,0 +1,49 @@
+.footer-bottom {
+  margin-top: 15px;
+  height: 200px;
+  width: 100%;
+  background: orangered;
+}
+
+.text-saying {
+  color: #DAC71B;
+  font-weight: 500;
+  margin: 15px 0 20px 0
+}
+
+.text-credit{
+  margin-bottom: 20px
+}
+
+.text-credit span{
+  display: block;
+  line-height: 25px;
+  text-align: center;
+  color: #CFDDF2;
+  
+}
+
+.text-credit span a{
+  text-decoration: none;
+  color: orangered
+}
+
+.text-credit span a:hover, .text-developer span a:hover{
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.text-developer span{
+  text-align: center;
+  width: 100%;
+  letter-spacing: -0.15px;
+  font-weight: 500;
+  display: block;
+  color: #CFDDF2;
+}
+
+.text-developer span a{
+  margin-left: 5px;
+  text-decoration: none;
+  color: #DAC71B;
+}

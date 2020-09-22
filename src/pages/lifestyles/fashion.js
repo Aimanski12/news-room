@@ -1,14 +1,14 @@
 import React, {useEffect, useState, Fragment} from 'react'
 import Head from 'next/head'
 import {getData} from '../../utils/api/apis'
-import LayoutTwo from '../../components/Layouts/LayoutTwo'
 import LayoutOne from '../../components/Layouts/LayoutOne'
-import LayoutFour from '../../components/Layouts/LayoutFour'
-import LayoutFive from '../../components/Layouts/LayoutFive'
 import LayoutSix from '../../components/Layouts/LayoutSix'
+import LayoutThree from '../../components/Layouts/LayoutThree'
+import LayoutFive from '../../components/Layouts/LayoutFive'
+import LayoutFour from '../../components/Layouts/LayoutFour'
 
 // import parse from 'html-react-parser'
-export default function Home() {
+export default function Fashion() {
 
   const [data, setData] = useState({
     isSet: false,
@@ -18,7 +18,7 @@ export default function Home() {
   useEffect(() => {
     if(!data.isSet){
       async function gData() {
-        let results = await getData('sportAll')
+        let results = await getData('fashion')
         setData({
           isSet: true,
           data: {...results}
@@ -31,7 +31,7 @@ export default function Home() {
   return (
     <div className='main-container'>
       <Head>
-        <title>News-Box | Sports</title>
+        <title>News-Box | Fashion</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -45,30 +45,30 @@ export default function Home() {
           {
             data.isSet ? (
               <Fragment>
-                <LayoutFour 
+                <LayoutFour
+                  link={false}
+                  theme='theme-one-a'
+                  textHeader='Milan'
+                  data={data.data.item1}/>
+                <LayoutThree
                   link={false}
                   theme='theme-five-b'
-                  textHeader='Soccer'
-                  data={data.data.item1}/>
-                <LayoutSix 
-                  theme='theme-one-b'
-                  link={false}
-                  textHeader='NBA'
+                  textHeader='Paris'
                   data={data.data.item2}/>
-                <LayoutFive 
-                  theme='theme-two-a'
+                <LayoutSix
                   link={false}
-                  textHeader='Tennis'
+                  theme='theme-three-a'
+                  textHeader='Beauty'
                   data={data.data.item3}/>
-                <LayoutOne 
-                  theme='theme-thee-b'
+                <LayoutFive
                   link={false}
-                  textHeader='Golf'
-                  data={data.data.item4}/>
-                <LayoutTwo 
                   theme='theme-four-b'
+                  textHeader='Dress'
+                  data={data.data.item4}/>
+                <LayoutOne
                   link={false}
-                  textHeader='Baseball'
+                  theme='theme-two-b'
+                  textHeader='Fragrance'
                   data={data.data.item5}/>
               </Fragment>
             ) : null
@@ -85,3 +85,4 @@ export default function Home() {
     </div>
   )
 }
+

@@ -24,6 +24,8 @@ import '../../styles/themes/themefive.css'
 
 // footer
 import '../../styles/footer/footer.css'
+import '../../styles/footer/footer-logo.css'
+import '../../styles/footer/bottom.css'
 
 
 function MyApp({ Component, pageProps }) {

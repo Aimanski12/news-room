@@ -18,29 +18,28 @@ export async function world() {
 export async function usnews() {
   const r = 'section=us-news&tag='
   const elections = await newsData(`${r}us-news/us-elections-2020`)
-  const politics = await newsData(`${r}us-news/us-politics`)
+  const politics = await newsData(`section=politics&tag=${r}us-news/us-politics`)
   const covid = await newsData(`section=us-news&tag=world/coronavirus-outbreak`)
-  const news = await newsData(`${r}us-news/us-news`)
-  return sortData(elections, politics, covid, news)
+  const schools = await newsData(`${r}us-news/us-universities`)
+  return sortData(elections, politics, covid, schools)
 }
 
 export async function uknews() {
   const r = 'section=uk-news&tag='
   const politics = await newsData(`${r}politics/politics`)
   const covid = await newsData(`${r}world/coronavirus-outbreak`)
-  const news = await newsData(`${r}uk/uk`)
+  const news = await newsData(`${r}uk/london`)
   const sports = await newsData(`section=sport&tag=uk/uk`)
-  console.log(news)
   return sortData(politics, covid, news, sports)
 }
 
 export async function ausnews() {
   const r = 'section=australia-news&tag='
   const politics = await newsData(`${r}australia-news/australian-politics`)
-  const news = await newsData(`${r}australia-news/australia-news`)
+  const news = await newsData(`${r}australia-news/new-south-wales`)
   const covid = await newsData(`${r}world/coronavirus-outbreak`)
   const sydney = await newsData(`${r}australia-news/sydney`)
-  
+  console.log(news)
   return sortData(politics, covid, news, sydney)
 }
 
@@ -49,7 +48,7 @@ export async function asia() {
   const china = await newsData(`${r}world/china`)
   const japan = await newsData(`${r}world/japan`)
   const india = await newsData(`${r}world/india`)
-  const asia = await newsData(`${r}world/asia-pacific`)
+  const asia = await newsData(`${r}world/philippines`)
   return sortData(china, japan, india, asia)
 }
 

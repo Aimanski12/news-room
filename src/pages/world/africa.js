@@ -1,14 +1,12 @@
 import React, {useEffect, useState, Fragment} from 'react'
 import Head from 'next/head'
 import {getData} from '../../utils/api/apis'
+import LayoutFour from '../../components/Layouts/LayoutFour'
+import LayoutThree from '../../components/Layouts/LayoutThree'
 import LayoutTwo from '../../components/Layouts/LayoutTwo'
 import LayoutOne from '../../components/Layouts/LayoutOne'
-import LayoutFour from '../../components/Layouts/LayoutFour'
-import LayoutFive from '../../components/Layouts/LayoutFive'
-import LayoutSix from '../../components/Layouts/LayoutSix'
 
-// import parse from 'html-react-parser'
-export default function Home() {
+export default function Africa() {
 
   const [data, setData] = useState({
     isSet: false,
@@ -18,7 +16,7 @@ export default function Home() {
   useEffect(() => {
     if(!data.isSet){
       async function gData() {
-        let results = await getData('sportAll')
+        let results = await getData('africa')
         setData({
           isSet: true,
           data: {...results}
@@ -31,7 +29,7 @@ export default function Home() {
   return (
     <div className='main-container'>
       <Head>
-        <title>News-Box | Sports</title>
+        <title>News-Box | Africa News</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -45,31 +43,26 @@ export default function Home() {
           {
             data.isSet ? (
               <Fragment>
-                <LayoutFour 
+                <LayoutOne
                   link={false}
-                  theme='theme-five-b'
-                  textHeader='Soccer'
+                  theme='theme-four-a'
+                  textHeader='South Africa'
                   data={data.data.item1}/>
-                <LayoutSix 
-                  theme='theme-one-b'
+                <LayoutTwo
                   link={false}
-                  textHeader='NBA'
+                  theme='theme-three-b'
+                  textHeader='Egypt'
                   data={data.data.item2}/>
-                <LayoutFive 
-                  theme='theme-two-a'
+                <LayoutThree
                   link={false}
-                  textHeader='Tennis'
+                  theme='theme-five-a'
+                  textHeader='Nigeria'
                   data={data.data.item3}/>
-                <LayoutOne 
-                  theme='theme-thee-b'
+                <LayoutFour
                   link={false}
-                  textHeader='Golf'
+                  theme='theme-two-b'
+                  textHeader='Africas'
                   data={data.data.item4}/>
-                <LayoutTwo 
-                  theme='theme-four-b'
-                  link={false}
-                  textHeader='Baseball'
-                  data={data.data.item5}/>
               </Fragment>
             ) : null
           }
@@ -85,3 +78,4 @@ export default function Home() {
     </div>
   )
 }
+

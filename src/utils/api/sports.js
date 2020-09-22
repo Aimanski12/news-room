@@ -6,18 +6,12 @@ import {_time} from './filterdate'
 export async function sports() {
   const r = 'section='
   const a = 'section=sport&tag='
-  const headline = await newsData(`${r}sport`)
   const soccer = await newsData(`${r}football`)
   const nba = await newsData(`${a}sport/nba`)
   const golf = await newsData(`${a}sport/golf`)
   const tennis = await newsData(`${a}sport/tennis`)
   const mlb = await newsData(`${a}sport/mlb`)
-  return sortData(headline, soccer, nba, tennis, golf, mlb)
-}
-
-export async function sport() {
-  const r = 'section=sport'
-  return getData(r)
+  return sortData(soccer, nba, tennis, golf, mlb)
 }
 
 export async function football(){
