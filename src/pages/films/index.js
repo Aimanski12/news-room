@@ -1,31 +1,13 @@
-import React, {useEffect, useState, Fragment} from 'react'
+import React from 'react'
 import Head from 'next/head'
 import {getData} from '../../utils/api/apis'
 import LayoutTwo from '../../components/Layouts/LayoutTwo'
 import LayoutThree from '../../components/Layouts/LayoutThree'
 import LayoutOne from '../../components/Layouts/LayoutOne'
 import LayoutFour from '../../components/Layouts/LayoutFour'
+import Footer from '../../components/Footer/Footer'
 
-// import parse from 'html-react-parser'
-export default function Home() {
-
-  const [data, setData] = useState({
-    isSet: false,
-    data: {}
-  })
-  
-  useEffect(() => {
-    if(!data.isSet){
-      async function gData() {
-        let results = await getData('filmall')
-        setData({
-          isSet: true,
-          data: {...results}
-        })
-      }
-      gData()
-    }
-  })
+export default function Films({data}) {
 
   return (
     <div className='main-container'>
@@ -41,42 +23,34 @@ export default function Home() {
       </header>
       <main className='content-center news-body'>
         <div className="content-center body-container">
-          {
-            data.isSet ? (
-              <Fragment>
-                <LayoutThree 
-                  link={false}
-                  theme='theme-three-a'
-                  textHeader='Films'
-                  data={data.data.item1}/>
-                <LayoutTwo
-                  link={false}
-                  theme='theme-four-b'
-                  textHeader='Media'
-                  data={data.data.item2}/>
-                <LayoutOne
-                  link={false}
-                  theme='theme-five-b'
-                  textHeader='Stage'
-                  data={data.data.item3}/>
-                <LayoutFour
-                  link={false}
-                  theme='theme-one-a'
-                  textHeader='Music'
-                  data={data.data.item4}/>
-              </Fragment>
-            ) : null
-          }
+          <LayoutThree 
+            link={false}
+            theme='theme-three-a'
+            textHeader='Films'
+            data={data.item1}/>
+          <LayoutTwo
+            link={false}
+            theme='theme-four-b'
+            textHeader='Media'
+            data={data.item2}/>
+          <LayoutOne
+            link={false}
+            theme='theme-five-b'
+            textHeader='Stage'
+            data={data.item3}/>
+          <LayoutFour
+            link={false}
+            theme='theme-one-a'
+            textHeader='Music'
+            data={data.item4}/>
         </div>
       </main>
-
-      <footer className='content-center'>
-        <div className="content-center footer-wrapper">
-          <h1>Footer</h1>
-        </div>
-
-      </footer>
+      <Footer />
     </div>
   )
 }
 
+Films.getInitialProps = async () => {
+  const data = await getData('filmall')
+  return { data }
+}

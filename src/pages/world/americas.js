@@ -1,30 +1,13 @@
-import React, {useEffect, useState, Fragment} from 'react'
+import React from 'react'
 import Head from 'next/head'
 import {getData} from '../../utils/api/apis'
 import LayoutSix from '../../components/Layouts/LayoutSix'
 import LayoutThree from '../../components/Layouts/LayoutThree'
 import LayoutTwo from '../../components/Layouts/LayoutTwo'
 import LayoutOne from '../../components/Layouts/LayoutOne'
+import Footer from '../../components/Footer/Footer'
 
-export default function Americas() {
-
-  const [data, setData] = useState({
-    isSet: false,
-    data: {}
-  })
-  
-  useEffect(() => {
-    if(!data.isSet){
-      async function gData() {
-        let results = await getData('amnews')
-        setData({
-          isSet: true,
-          data: {...results}
-        })
-      }
-      gData()
-    }
-  })
+export default function Americas({data}) {
 
   return (
     <div className='main-container'>
@@ -40,42 +23,34 @@ export default function Americas() {
       </header>
       <main className='content-center news-body'>
         <div className="content-center body-container">
-          {
-            data.isSet ? (
-              <Fragment>
-                <LayoutSix
-                  link={false}
-                  theme='theme-three-a'
-                  textHeader='Brazil'
-                  data={data.data.item1}/>
-                <LayoutOne
-                  link={false}
-                  theme='theme-two-b'
-                  textHeader='Mexico'
-                  data={data.data.item2}/>
-                <LayoutTwo
-                  link={false}
-                  theme='theme-four-a'
-                  textHeader='Argentina'
-                  data={data.data.item3}/>
-                <LayoutThree
-                  link={false}
-                  theme='theme-one-b'
-                  textHeader='Americas'
-                  data={data.data.item4}/>
-              </Fragment>
-            ) : null
-          }
+          <LayoutSix
+            link={false}
+            theme='theme-three-a'
+            textHeader='Brazil'
+            data={data.item1}/>
+          <LayoutOne
+            link={false}
+            theme='theme-two-b'
+            textHeader='Mexico'
+            data={data.item2}/>
+          <LayoutTwo
+            link={false}
+            theme='theme-four-a'
+            textHeader='Argentina'
+            data={data.item3}/>
+          <LayoutThree
+            link={false}
+            theme='theme-one-b'
+            textHeader='Americas'
+            data={data.item4}/>
         </div>
       </main>
-
-      <footer className='content-center'>
-        <div className="content-center footer-wrapper">
-          <h1>Footer</h1>
-        </div>
-
-      </footer>
+      <Footer />
     </div>
   )
 }
 
+Americas.getInitialProps = async () => {
+  const data = await getData('usnews')
+  return { data }
+}

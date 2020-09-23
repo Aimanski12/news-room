@@ -1,29 +1,12 @@
-import React, {useEffect, useState, Fragment} from 'react'
+import React from 'react'
 import Head from 'next/head'
 import {getData} from '../../utils/api/apis'
 import LayoutThree from '../../components/Layouts/LayoutThree'
 import LayoutTwo from '../../components/Layouts/LayoutTwo'
 import LayoutSix from '../../components/Layouts/LayoutSix'
+import Footer from '../../components/Footer/Footer'
 
-export default function Nba() {
-
-  const [data, setData] = useState({
-    isSet: false,
-    data: {}
-  })
-  
-  useEffect(() => {
-    if(!data.isSet){
-      async function gData() {
-        let results = await getData('basketball')
-        setData({
-          isSet: true,
-          data: {...results}
-        })
-      }
-      gData()
-    }
-  })
+export default function Nba({data}) {
 
   return (
     <div className='main-container'>
@@ -39,36 +22,29 @@ export default function Nba() {
       </header>
       <main className='content-center news-body'>
         <div className="content-center body-container">
-          {
-            data.isSet ? (
-              <Fragment>
-                <LayoutSix
-                  link={false}
-                  theme='theme-two-b'
-                  textHeader='This Month'
-                  data={data.data.item1}/>
-                <LayoutTwo
-                  theme='theme-three-b'
-                  link={false}
-                  textHeader='Last Month'
-                  data={data.data.item2}/>
-                <LayoutThree 
-                  theme='theme-four-a'
-                  link={false}
-                  textHeader='Previews Month'
-                  data={data.data.item3}/>
-              </Fragment>
-            ) : null
-          }
+          <LayoutSix
+            link={false}
+            theme='theme-two-b'
+            textHeader='This Month'
+            data={data.item1}/>
+          <LayoutTwo
+            theme='theme-three-b'
+            link={false}
+            textHeader='Last Month'
+            data={data.item2}/>
+          <LayoutThree 
+            theme='theme-four-a'
+            link={false}
+            textHeader='Previews Month'
+            data={data.item3}/>
         </div>
       </main>
-
-      <footer className='content-center'>
-        <div className="content-center footer-wrapper">
-          <h1>Footer</h1>
-        </div>
-
-      </footer>
+      <Footer />
     </div>
   )
+}
+
+Nba.getInitialProps = async () => {
+  const data = await getData('basketball')
+  return { data }
 }

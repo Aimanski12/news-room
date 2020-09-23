@@ -1,4 +1,4 @@
-import React, {useEffect, useState, Fragment} from 'react'
+import React from 'react'
 import Head from 'next/head'
 import {getData} from '../../utils/api/apis'
 import LayoutTwo from '../../components/Layouts/LayoutTwo'
@@ -6,27 +6,9 @@ import LayoutOne from '../../components/Layouts/LayoutOne'
 import LayoutFour from '../../components/Layouts/LayoutFour'
 import LayoutFive from '../../components/Layouts/LayoutFive'
 import LayoutSix from '../../components/Layouts/LayoutSix'
+import Footer from '../../components/Footer/Footer'
 
-// import parse from 'html-react-parser'
-export default function Home() {
-
-  const [data, setData] = useState({
-    isSet: false,
-    data: {}
-  })
-  
-  useEffect(() => {
-    if(!data.isSet){
-      async function gData() {
-        let results = await getData('sportAll')
-        setData({
-          isSet: true,
-          data: {...results}
-        })
-      }
-      gData()
-    }
-  })
+export default function Sports({data}) {
 
   return (
     <div className='main-container'>
@@ -42,46 +24,39 @@ export default function Home() {
       </header>
       <main className='content-center news-body'>
         <div className="content-center body-container">
-          {
-            data.isSet ? (
-              <Fragment>
-                <LayoutFour 
-                  link={false}
-                  theme='theme-five-b'
-                  textHeader='Soccer'
-                  data={data.data.item1}/>
-                <LayoutSix 
-                  theme='theme-one-b'
-                  link={false}
-                  textHeader='NBA'
-                  data={data.data.item2}/>
-                <LayoutFive 
-                  theme='theme-two-a'
-                  link={false}
-                  textHeader='Tennis'
-                  data={data.data.item3}/>
-                <LayoutOne 
-                  theme='theme-thee-b'
-                  link={false}
-                  textHeader='Golf'
-                  data={data.data.item4}/>
-                <LayoutTwo 
-                  theme='theme-four-b'
-                  link={false}
-                  textHeader='Baseball'
-                  data={data.data.item5}/>
-              </Fragment>
-            ) : null
-          }
+          <LayoutFour 
+            link={false}
+            theme='theme-five-b'
+            textHeader='Soccer'
+            data={data.item1}/>
+          <LayoutSix 
+            theme='theme-one-b'
+            link={false}
+            textHeader='NBA'
+            data={data.item2}/>
+          <LayoutFive 
+            theme='theme-two-a'
+            link={false}
+            textHeader='Tennis'
+            data={data.item3}/>
+          <LayoutOne 
+            theme='theme-thee-b'
+            link={false}
+            textHeader='Golf'
+            data={data.item4}/>
+          <LayoutTwo 
+            theme='theme-four-b'
+            link={false}
+            textHeader='Baseball'
+            data={data.item5}/>
         </div>
       </main>
-
-      <footer className='content-center'>
-        <div className="content-center footer-wrapper">
-          <h1>Footer</h1>
-        </div>
-
-      </footer>
+      <Footer />
     </div>
   )
+}
+
+Sports.getInitialProps = async () => {
+  const data = await getData('sportAll')
+  return { data }
 }

@@ -1,0 +1,184 @@
+{
+  "world": [
+    {
+      "name": "World",
+      "link": "/"
+    },
+    {
+      "name": "US",
+      "link": "/world/us-news"
+    },
+    {
+      "name": "UK",
+      "link": "/world/uk-news"
+    },
+    {
+      "name": "Australia",
+      "link": "/world/australia"
+    },
+    {
+      "name": "Asia",
+      "link": "/world/asia-news"
+    },
+    {
+      "name": "Americas",
+      "link": "/world/americas"
+    },
+    {
+      "name": "Africa",
+      "link": "/world/africa"
+    },
+    {
+      "name": "Europe",
+      "link": "/world/europe"
+    }
+  ],
+  "news": [
+    {
+      "name": "News",
+      "link": "/news"
+    },
+    {
+      "name": "Environment",
+      "link": "/news/environment"
+    },
+    {
+      "name": "Technology",
+      "link": "/news/technology"
+    },
+    {
+      "name": "Science",
+      "link": "/news/science"
+    },
+    {
+      "name": "Politics",
+      "link": "/news/politics"
+    },
+    {
+      "name": "Covid-19",
+      "link": "/news/covid-19"
+    },
+    {
+      "name": "Education",
+      "link": "/news/education"
+    }
+  ],
+  "money": [
+    {
+      "name": "Money",
+      "link": "/money"
+    },
+    {
+      "name": "Finance",
+      "link": "/money/finance"
+    },
+    {
+      "name": "Business",
+      "link": "/money/business"
+    },
+    {
+      "name": "Investment",
+      "link": "/money/investment"
+    },
+    {
+      "name": "Realestate",
+      "link": "/money/realestate"
+    },
+    {
+      "name": "Work",
+      "link": "/money/work"
+    }
+  ],
+  "sports": [
+    {
+      "name": "Sports",
+      "link": "/sports"
+    },
+    {
+      "name": "Soccer",
+      "link": "/sports/soccer-news"
+    },
+    {
+      "name": "NBA",
+      "link": "/sports/nba-news"
+    },
+    {
+      "name": "Tennis",
+      "link": "/sports/tennis-news"
+    },
+    {
+      "name": "Golf",
+      "link": "/sports/golf-news"
+    },
+    {
+      "name": "MLB",
+      "link": "/sports/mlb-news"
+    }
+  ],
+  "lifestyle": [
+    {
+      "name": "Lifestyle",
+      "link": "/lifestyles"
+    },
+    {
+      "name": "Relationship",
+      "link": "/lifestyles/relationship"
+    },
+    {
+      "name": "Fashion",
+      "link": "/lifestyles/fashion"
+    },
+    {
+      "name": "Books",
+      "link": "/lifestyles/books"
+    },
+    {
+      "name": "Food",
+      "link": "/lifestyles/food"
+    },
+    {
+      "name": "Travel",
+      "link": "/lifestyles/travel"
+    }
+  ],
+   "culture": [
+    {
+      "name": "Culture",
+      "link": "/cultures"
+    },
+    {
+      "name": "Festivals",
+      "link": "/cultures/festivals"
+    },
+    {
+      "name": "Society",
+      "link": "/cultures/society"
+    },
+    {
+      "name": "Arts and Design",
+      "link": "/cultures/art-and-design"
+    }
+  ],
+   "films": [
+    {
+      "name": "Films",
+      "link": "/films"
+    },
+    {
+      "name": "Drama",
+      "link": "/films/drama"
+    },
+    {
+      "name": "Music",
+      "link": "/films/music"
+    },
+    {
+      "name": "Media",
+      "link": "/films/media"
+    },
+    {
+      "name": "Stage",
+      "link": "/films/stage"
+    }
+  ]
+}

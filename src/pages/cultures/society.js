@@ -1,31 +1,13 @@
-import React, {useEffect, useState, Fragment} from 'react'
+import React from 'react'
 import Head from 'next/head'
 import {getData} from '../../utils/api/apis'
 import LayoutFour from '../../components/Layouts/LayoutFour'
 import LayoutSix from '../../components/Layouts/LayoutSix'
 import LayoutOne from '../../components/Layouts/LayoutOne'
 import LayoutFive from '../../components/Layouts/LayoutFive'
+import Footer from '../../components/Footer/Footer'
 
-// import parse from 'html-react-parser'
-export default function Home() {
-
-  const [data, setData] = useState({
-    isSet: false,
-    data: {}
-  })
-  
-  useEffect(() => {
-    if(!data.isSet){
-      async function gData() {
-        let results = await getData('society')
-        setData({
-          isSet: true,
-          data: {...results}
-        })
-      }
-      gData()
-    }
-  })
+export default function Society({data}) {
 
   return (
     <div className='main-container'>
@@ -41,42 +23,34 @@ export default function Home() {
       </header>
       <main className='content-center news-body'>
         <div className="content-center body-container">
-          {
-            data.isSet ? (
-              <Fragment>
-                <LayoutFour 
-                  link={false}
-                  theme='theme-two-a'
-                  textHeader='Health'
-                  data={data.data.item1}/>
-                <LayoutFive
-                  link={false}
-                  theme='theme-one-b'
-                  textHeader='Living'
-                  data={data.data.item2}/>
-                <LayoutOne
-                  link={false}
-                  theme='theme-three-a'
-                  textHeader='Care'
-                  data={data.data.item3}/>
-                <LayoutSix 
-                  theme='theme-four-b'
-                  link={false}
-                  textHeader='Society'
-                  data={data.data.item4}/>
-              </Fragment>
-            ) : null
-          }
+          <LayoutFour 
+            link={false}
+            theme='theme-two-a'
+            textHeader='Health'
+            data={data.item1}/>
+          <LayoutFive
+            link={false}
+            theme='theme-one-b'
+            textHeader='Living'
+            data={data.item2}/>
+          <LayoutOne
+            link={false}
+            theme='theme-three-a'
+            textHeader='Care'
+            data={data.item3}/>
+          <LayoutSix 
+            theme='theme-four-b'
+            link={false}
+            textHeader='Society'
+            data={data.item4}/>
         </div>
       </main>
-
-      <footer className='content-center'>
-        <div className="content-center footer-wrapper">
-          <h1>Footer</h1>
-        </div>
-
-      </footer>
+      <Footer />
     </div>
   )
 }
 
+Society.getInitialProps = async () => {
+  const data = await getData('society')
+  return { data }
+}

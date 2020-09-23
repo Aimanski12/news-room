@@ -1,4 +1,4 @@
-import React, {useEffect, useState, Fragment} from 'react'
+import React from 'react'
 import Head from 'next/head'
 import {getData} from '../../utils/api/apis'
 import LayoutTwo from '../../components/Layouts/LayoutTwo'
@@ -6,28 +6,9 @@ import LayoutThree from '../../components/Layouts/LayoutThree'
 import LayoutFour from '../../components/Layouts/LayoutFour'
 import LayoutFive from '../../components/Layouts/LayoutFive'
 import LayoutSix from '../../components/Layouts/LayoutSix'
+import Footer from '../../components/Footer/Footer'
 
-// import parse from 'html-react-parser'
-export default function Home() {
-
-  const [data, setData] = useState({
-    isSet: false,
-    data: {}
-  })
-  
-  useEffect(() => {
-    if(!data.isSet){
-      async function gData() {
-        let results = await getData('science')
-        setData({
-          isSet: true,
-          data: {...results}
-        })
-      }
-      gData()
-    }
-  })
-
+export default function Science({data}) {
 
   return (
     <div className='main-container'>
@@ -43,51 +24,44 @@ export default function Home() {
       </header>
       <main className='content-center news-body'>
         <div className="content-center body-container">
-          {
-            data.isSet ? (
-              <Fragment>
-                <LayoutTwo 
-                  theme='theme-three-b'
-                  link={false}
-                  textHeader='Space Exploration'
-                  data={data.data.item1}/>
-                <LayoutFour 
-                  theme='theme-four-b'
-                  link={false}
-                  textHeader='Medical Research'
-                  data={data.data.item2}/>
-                <LayoutFive 
-                  theme='theme-five-b'
-                  link={false}
-                  textHeader='Zoology'
-                  data={data.data.item3}/>
-                <LayoutSix 
-                  link={false}
-                  theme='theme-one-b'
-                  textHeader='Chemistry'
-                  data={data.data.item4}/>
-                <LayoutThree 
-                  theme='theme-two-b'
-                  link={false}
-                  textHeader='Neurology'
-                  data={data.data.item5}/>
-                <LayoutTwo
-                  link={false}
-                  theme='theme-three-b'
-                  textHeader='Diseases'
-                  data={data.data.item6}/>
-              </Fragment>
-            ) : null
-          }
+          <LayoutTwo 
+            theme='theme-three-b'
+            link={false}
+            textHeader='Space Exploration'
+            data={data.item1}/>
+          <LayoutFour 
+            theme='theme-four-b'
+            link={false}
+            textHeader='Medical Research'
+            data={data.item2}/>
+          <LayoutFive 
+            theme='theme-five-b'
+            link={false}
+            textHeader='Zoology'
+            data={data.item3}/>
+          <LayoutSix 
+            link={false}
+            theme='theme-one-b'
+            textHeader='Chemistry'
+            data={data.item4}/>
+          <LayoutThree 
+            theme='theme-two-b'
+            link={false}
+            textHeader='Neurology'
+            data={data.item5}/>
+          <LayoutTwo
+            link={false}
+            theme='theme-three-b'
+            textHeader='Diseases'
+            data={data.item6}/>
         </div>
       </main>
-
-      <footer className='content-center'>
-        <div className="content-center footer-wrapper">
-          <h1>Footer</h1>
-        </div>
-
-      </footer>
+      <Footer />
     </div>
   )
+}
+
+Science.getInitialProps = async () => {
+  const data = await getData('science')
+  return { data }
 }

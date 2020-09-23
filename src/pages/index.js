@@ -1,40 +1,20 @@
-import React, {useEffect, useState, Fragment} from 'react'
+import React from 'react'
 import Head from 'next/head'
+import Footer from '../components/Footer/Footer'
 import {getData} from '../utils/api/apis'
-import LayoutOne from '../components/Layouts/LayoutOne'
 import LayoutTwo from '../components/Layouts/LayoutTwo'
-import LayoutThree from '../components/Layouts/LayoutThree'
+import LayoutSix from '../components/Layouts/LayoutSix'
+import LayoutOne from '../components/Layouts/LayoutOne'
 import LayoutFour from '../components/Layouts/LayoutFour'
 import LayoutFive from '../components/Layouts/LayoutFive'
-import LayoutSix from '../components/Layouts/LayoutSix'
-import Footer from '../components/Footer/Footer'
+import LayoutThree from '../components/Layouts/LayoutThree'
 
-// import parse from 'html-react-parser'
-export default function Home() {
-
-  const [data, setData] = useState({
-    isSet: false,
-    data: {}
-  })
-  
-  useEffect(() => {
-    if(!data.isSet){
-      async function gData() {
-        let results = await getData('main')
-        setData({
-          isSet: true,
-          data: {...results}
-        })
-      }
-      gData()
-    }
-  })
-
+export default function World({data}) {
 
   return (
     <div className='main-container'>
       <Head>
-        <title>News-Box | News</title>
+        <title>News-Box | World</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -45,46 +25,51 @@ export default function Home() {
       </header>
       <main className='content-center news-body'>
         <div className="content-center body-container">
-          {
-            data.isSet ? (
-              <Fragment>
-                <LayoutOne 
-                  link='/news/covid-19'
-                  theme='theme-two-a'
-                  textHeader='Covid-19'
-                  data={data.data.item1}/>
-                <LayoutTwo 
-                  theme='theme-three-a'
-                  link='/news/politics'
-                  textHeader='Politics'
-                  data={data.data.item2}/>
-                <LayoutThree 
-                  theme='theme-four-b'
-                  link='/news/environment'
-                  textHeader='Environment'
-                  data={data.data.item3}/>
-                <LayoutFour 
-                  theme='theme-five-b'
-                  link='/news/technology'
-                  textHeader='Technology'
-                  data={data.data.item4}/>
-                <LayoutFive 
-                  theme='theme-three-a'
-                  link='/news/science'
-                  textHeader='Science'
-                  data={data.data.item5}/>
-                <LayoutSix 
-                  theme='theme-five-b'
-                  link='/news/education'
-                  textHeader='Education'
-                  data={data.data.item6}/>
-              </Fragment>
-            ) : null
-          }
+          <LayoutOne
+            link={false}
+            theme='theme-three-a'
+            textHeader='US'
+            data={data.item1}/>
+          <LayoutTwo
+            link={false}
+            theme='theme-two-b'
+            textHeader='UK'
+            data={data.item2}/>
+          <LayoutThree
+            link={false}
+            theme='theme-four-a'
+            textHeader='Australia'
+            data={data.item3}/>
+          <LayoutFour
+            link={false}
+            theme='theme-one-b'
+            textHeader='Asia'
+            data={data.item4}/>
+          <LayoutFive
+            link={false}
+            theme='theme-five-b'
+            textHeader='Americas'
+            data={data.item5}/>
+          <LayoutSix
+            link={false}
+            theme='theme-three-a'
+            textHeader='Africa'
+            data={data.item6}/>
+          <LayoutTwo
+            link={false}
+            theme='theme-two-b'
+            textHeader='Europe'
+            data={data.item7}/>
+
         </div>
       </main>
 
       <Footer />
     </div>
   )
+}
+
+World.getInitialProps = async () => {
+  const data = await getData('world')
+  return {data}
 }

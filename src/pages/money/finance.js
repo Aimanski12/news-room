@@ -1,19 +1,18 @@
 import React from 'react'
 import Head from 'next/head'
 import {getData} from '../../utils/api/apis'
-import LayoutOne from '../../components/Layouts/LayoutOne'
-import LayoutSix from '../../components/Layouts/LayoutSix'
-import LayoutTwo from '../../components/Layouts/LayoutTwo'
 import LayoutFive from '../../components/Layouts/LayoutFive'
+import LayoutTwo from '../../components/Layouts/LayoutTwo'
 import LayoutFour from '../../components/Layouts/LayoutFour'
+import LayoutThree from '../../components/Layouts/LayoutThree'
 import Footer from '../../components/Footer/Footer'
 
-export default function Books({data}) {
+export default function Money({data}) {
 
   return (
     <div className='main-container'>
       <Head>
-        <title>News-Box | Books</title>
+        <title>News-Box | Finance</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -24,31 +23,26 @@ export default function Books({data}) {
       </header>
       <main className='content-center news-body'>
         <div className="content-center body-container">
+          <LayoutTwo
+            link={false}
+            theme='theme-five-a'
+            textHeader='Business'
+            data={data.item2}/>
           <LayoutFive
             link={false}
-            theme='theme-two-a'
-            textHeader='Books'
+            theme='theme-four-b'
+            textHeader='Debt'
+            data={data.item3}/>
+          <LayoutThree
+            link={false}
+            theme='theme-one-a'
+            textHeader='Money'
             data={data.item1}/>
           <LayoutFour
             link={false}
-            theme='theme-one-b'
-            textHeader='Blog'
-            data={data.item2}/>
-          <LayoutOne
-            link={false}
-            theme='theme-four-a'
-            textHeader='Fiction'
-            data={data.item3}/>
-          <LayoutSix
-            link={false}
-            theme='theme-five-b'
-            textHeader='Price'
-            data={data.item4}/>
-          <LayoutTwo
-            link={false}
             theme='theme-three-b'
-            textHeader='Adult'
-            data={data.item5}/>
+            textHeader='Consumer'
+            data={data.item4}/>
         </div>
       </main>
       <Footer />
@@ -56,7 +50,7 @@ export default function Books({data}) {
   )
 }
 
-Books.getInitialProps = async () => {
-  const data = await getData('books')
+Money.getInitialProps = async () => {
+  const data = await getData('money')
   return { data }
 }

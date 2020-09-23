@@ -2,7 +2,7 @@ import axios from 'axios'
 
 const qurl = `https://content.guardianapis.com/search?`
 const api = 'api-key=8d8ca8cf-eb89-46b7-8b56-2a4ed8398362'
-const filters = `format=json&show-fields=all&show-refinements=all&show-tags=all&order-by=newest&page-size=12`
+const filters = `format=json&show-fields=all&show-references=&show-refinements=all&show-tags=all&order-by=newest&page-size=12`
 
 // function for the new page data fetch
 export async function newsData(path) {

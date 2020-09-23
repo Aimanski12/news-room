@@ -1,6 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
 import {getData} from '../../utils/api/apis'
+import LayoutOne from '../../components/Layouts/LayoutOne'
 import LayoutTwo from '../../components/Layouts/LayoutTwo'
 import LayoutThree from '../../components/Layouts/LayoutThree'
 import LayoutFour from '../../components/Layouts/LayoutFour'
@@ -8,12 +9,12 @@ import LayoutFive from '../../components/Layouts/LayoutFive'
 import LayoutSix from '../../components/Layouts/LayoutSix'
 import Footer from '../../components/Footer/Footer'
 
-export default function Politics({data}) {
+export default function News({data}) {
 
   return (
     <div className='main-container'>
       <Head>
-        <title>News-Box | Politics</title>
+        <title>News-Box | News</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -24,31 +25,36 @@ export default function Politics({data}) {
       </header>
       <main className='content-center news-body'>
         <div className="content-center body-container">
-          <LayoutSix 
-            link={false}
-            theme='theme-five-a'
-            textHeader='US'
+          <LayoutOne 
+            link='/news/covid-19'
+            theme='theme-two-a'
+            textHeader='Covid-19'
             data={data.item1}/>
-          <LayoutFour 
-            theme='theme-four-b'
-            link={false}
-            textHeader='UK'
-            data={data.item2}/>
-          <LayoutFive 
-            theme='theme-three-b'
-            link={false}
-            textHeader='Australia'
-            data={data.item3}/>
-          <LayoutThree 
-            theme='theme-two-b'
-            link={false}
-            textHeader='Asia'
-            data={data.item4}/>
           <LayoutTwo 
-            link={false}
-            theme='theme-one-b'
-            textHeader='Africa'
+            theme='theme-three-a'
+            link='/news/politics'
+            textHeader='Politics'
+            data={data.item2}/>
+          <LayoutThree 
+            theme='theme-four-b'
+            link='/news/environment'
+            textHeader='Environment'
+            data={data.item3}/>
+          <LayoutFour 
+            theme='theme-five-b'
+            link='/news/technology'
+            textHeader='Technology'
+            data={data.item4}/>
+          <LayoutFive 
+            theme='theme-three-a'
+            link='/news/science'
+            textHeader='Science'
             data={data.item5}/>
+          <LayoutSix 
+            theme='theme-five-b'
+            link='/news/education'
+            textHeader='Education'
+            data={data.item6}/>
         </div>
       </main>
       <Footer />
@@ -56,7 +62,7 @@ export default function Politics({data}) {
   )
 }
 
-Politics.getInitialProps = async () => {
-  const data = await getData('politics')
+News.getInitialProps = async () => {
+  const data = await getData('main')
   return { data }
 }
