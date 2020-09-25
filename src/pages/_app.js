@@ -5,6 +5,10 @@ import '../../styles/font.css'
 
 // header css
 import '../../styles/header/header.css'
+import '../../styles/header/logo.css'
+import '../../styles/header/menu.css'
+import '../../styles/header/search.css'
+import '../../styles/header/submenu.css'
 
 // body
 import '../../styles/body/body.css'
@@ -27,9 +31,19 @@ import '../../styles/footer/footer.css'
 import '../../styles/footer/footer-logo.css'
 import '../../styles/footer/bottom.css'
 
+// spinner
+import '../../styles/spinner/spinner.css'
+
+// data context 
+import {AppsDataContext} from '../utils/context/contextapi'
+
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return (
+    <AppsDataContext>
+      <Component {...pageProps} />
+    </AppsDataContext>
+  )
 }
 
 export default MyApp

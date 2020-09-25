@@ -1,0 +1,54 @@
+
+.navbar-logo {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  background: rgba(190,190,190,.05);
+}
+
+
+.navbar-logo a {
+  width: 120px;
+  height: 50px;
+}
+
+.navbar-logo a svg {
+  width: 100%
+} 
+
+.text-logo {
+  font-family: 'Solway', sans-serif;
+  color: #DAC71B;
+  font-size: 0.65em;
+  text-align: center;
+}
+
+@media (max-width: 868px){
+  .navbar-logo {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+    background: rgba(190, 190, 190, .05);
+  }
+
+
+  .navbar-logo a {
+    width: 100px;
+
+    height: 50px;
+  }
+
+  .navbar-logo a svg {
+
+    width: 100%
+  }
+
+  .text-logo {
+
+    display: none;
+  }
+}
+

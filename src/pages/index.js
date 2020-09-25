@@ -1,15 +1,22 @@
-import React from 'react'
+import React, {useContext, useEffect} from 'react'
 import Head from 'next/head'
+import Header from '../components/Header/Header'
 import Footer from '../components/Footer/Footer'
 import {getData} from '../utils/api/apis'
+import {AppData} from '../utils/context/contextapi'
 import LayoutTwo from '../components/Layouts/LayoutTwo'
 import LayoutSix from '../components/Layouts/LayoutSix'
 import LayoutOne from '../components/Layouts/LayoutOne'
 import LayoutFour from '../components/Layouts/LayoutFour'
 import LayoutFive from '../components/Layouts/LayoutFive'
 import LayoutThree from '../components/Layouts/LayoutThree'
+import Spinner from '../components/Spinner/Spinner'
 
 export default function World({data}) {
+  const {setSpinning, isSpin} = useContext(AppData)
+  useEffect(()=>{
+    setSpinning('loaded', 'World')
+  })
 
   return (
     <div className='main-container'>
@@ -18,45 +25,43 @@ export default function World({data}) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <header className='content-center'>
-        <div className="content-center header-wrapper">
-          <h1 className="">Header</h1>
-        </div>
-      </header>
+      <Spinner spin={isSpin.spin}/>
+
+      <Header />
       <main className='content-center news-body'>
         <div className="content-center body-container">
           <LayoutOne
-            link={false}
+            link={'/world/us-news'}
             theme='theme-three-a'
             textHeader='US'
             data={data.item1}/>
           <LayoutTwo
-            link={false}
+            link={'/world/uk-news'}
             theme='theme-two-b'
             textHeader='UK'
             data={data.item2}/>
           <LayoutThree
-            link={false}
+            link={'/world/australia'}
             theme='theme-four-a'
             textHeader='Australia'
             data={data.item3}/>
           <LayoutFour
-            link={false}
+            link={'/world/asia-news'}
             theme='theme-one-b'
             textHeader='Asia'
             data={data.item4}/>
           <LayoutFive
-            link={false}
+            link={'/world/americas'}
             theme='theme-five-b'
             textHeader='Americas'
             data={data.item5}/>
           <LayoutSix
-            link={false}
+            link={'/world/africa'}
             theme='theme-three-a'
             textHeader='Africa'
             data={data.item6}/>
           <LayoutTwo
-            link={false}
+            link={'/world/europe'}
             theme='theme-two-b'
             textHeader='Europe'
             data={data.item7}/>

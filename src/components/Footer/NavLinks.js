@@ -1,14 +1,18 @@
-import React from 'react'
+import React, {useContext} from 'react'
+import {AppData} from '../../utils/context/contextapi'
 import Link from 'next/link'
 
 function NavLinks(props) {
+  const {setSpinning} = useContext(AppData)
 
   let links = props.data.map((l, i) => {
     return (
       <Link href={l.link} 
         as={l.link} key={i}>
         <a>
-          <span className={`display-${i === 0 ? 7 : 10} text-cap`}>{l.name}</span>
+          <span 
+            className={`display-${i === 0 ? 7 : 10} text-cap`}
+            onClick={()=>setSpinning('click', l.name)}>{l.name}</span>
         </a>
       </Link>
     )

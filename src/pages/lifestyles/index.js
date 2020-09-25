@@ -1,4 +1,5 @@
-import React from 'react'
+import React, {useContext, useEffect} from 'react'
+import {AppData} from '../../utils/context/contextapi'
 import Head from 'next/head'
 import {getData} from '../../utils/api/apis'
 import LayoutTwo from '../../components/Layouts/LayoutTwo'
@@ -7,9 +8,13 @@ import LayoutOne from '../../components/Layouts/LayoutOne'
 import LayoutFour from '../../components/Layouts/LayoutFour'
 import LayoutFive from '../../components/Layouts/LayoutFive'
 import Footer from '../../components/Footer/Footer'
+import Spinner from '../../components/Spinner/Spinner'
 
-// import parse from 'html-react-parser'
 export default function Lifestyles({data}) {
+  const {setSpinning, isSpin} = useContext(AppData)
+  useEffect(()=>{
+    setSpinning('loaded', 'Lifestyle')
+  })
 
   return (
     <div className='main-container'>
@@ -17,8 +22,8 @@ export default function Lifestyles({data}) {
         <title>News-Box | Lifestyle News</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <header className='content-center'>
+      <Spinner spin={isSpin.spin}/>
+      <header className='content-center'> 
         <div className="content-center header-wrapper">
           <h1 className="">Header</h1>
         </div>
@@ -26,27 +31,27 @@ export default function Lifestyles({data}) {
       <main className='content-center news-body'>
         <div className="content-center body-container">
           <LayoutTwo 
-            link={false}
+            link={'/lifestyles/relationship'}
             theme='theme-four-a'
-            textHeader='Lifestyle'
+            textHeader='Relationship'
             data={data.item1}/>
           <LayoutOne
-            link={false}
+            link={'/lifestyles/fashion'}
             theme='theme-five-b'
             textHeader='Fashion'
             data={data.item2}/>
           <LayoutFour
-            link={false}
+            link={'/lifestyles/books'}
             theme='theme-one-b'
-            textHeader='Book'
+            textHeader='Books'
             data={data.item3}/>
           <LayoutThree
-            link={false}
+            link={'/lifestyles/food'}
             theme='theme-two-a'
             textHeader='Food'
             data={data.item4}/>
           <LayoutFive
-            link={false}
+            link={'/lifestyles/travel'}
             theme='theme-three-b'
             textHeader='Travel'
             data={data.item5}/>

@@ -1,4 +1,5 @@
-import React from 'react'
+import React, {useContext, useEffect} from 'react'
+import {AppData} from '../../utils/context/contextapi'
 import Head from 'next/head'
 import {getData} from '../../utils/api/apis'
 import LayoutThree from '../../components/Layouts/LayoutThree'
@@ -6,8 +7,13 @@ import LayoutFour from '../../components/Layouts/LayoutFour'
 import LayoutFive from '../../components/Layouts/LayoutFive'
 import LayoutSix from '../../components/Layouts/LayoutSix'
 import Footer from '../../components/Footer/Footer'
+import Spinner from '../../components/Spinner/Spinner'
 
 export default function Education({data}) {
+  const {setSpinning, isSpin} = useContext(AppData)
+  useEffect(()=>{
+    setSpinning('loaded', 'Education')
+  })
 
   return (
     <div className='main-container'>
@@ -15,7 +21,7 @@ export default function Education({data}) {
         <title>News-Box | Education</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
+      <Spinner spin={isSpin.spin}/>
       <header className='content-center'>
         <div className="content-center header-wrapper">
           <h1 className="">Header</h1>
@@ -39,7 +45,7 @@ export default function Education({data}) {
             textHeader='Students'
             data={data.item3}/>
           <LayoutSix 
-            theme='theme-six-b'
+            theme='theme-one-b'
             link={false}
             textHeader='Medical Research'
             data={data.item4}/>

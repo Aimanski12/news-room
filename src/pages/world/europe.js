@@ -1,4 +1,5 @@
-import React from 'react'
+import React, {useContext, useEffect} from 'react'
+import {AppData} from '../../utils/context/contextapi'
 import Head from 'next/head'
 import {getData} from '../../utils/api/apis'
 import LayoutFour from '../../components/Layouts/LayoutFour'
@@ -8,8 +9,13 @@ import LayoutOne from '../../components/Layouts/LayoutOne'
 import LayoutFive from '../../components/Layouts/LayoutFive'
 import LayoutSix from '../../components/Layouts/LayoutSix'
 import Footer from '../../components/Footer/Footer'
+import Spinner from '../../components/Spinner/Spinner'
 
 export default function Europe({data}) {
+  const {setSpinning, isSpin} = useContext(AppData)
+  useEffect(()=>{
+    setSpinning('loaded', 'Europe')
+  })
 
   return (
     <div className='main-container'>
@@ -17,7 +23,7 @@ export default function Europe({data}) {
         <title>News-Box | Europe News</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
+      <Spinner spin={isSpin.spin}/>
       <header className='content-center'>
         <div className="content-center header-wrapper">
           <h1 className="">Header</h1>
@@ -29,37 +35,37 @@ export default function Europe({data}) {
             link={false}
             theme='theme-five-a'
             textHeader='Russia'
-            data={data.data.item1}/>
+            data={data.item1}/>
           <LayoutThree
             link={false}
             theme='theme-four-b'
             textHeader='UK'
-            data={data.data.item2}/>
+            data={data.item2}/>
           <LayoutFour
             link={false}
             theme='theme-one-a'
             textHeader='Germany'
-            data={data.data.item3}/>
+            data={data.item3}/>
           <LayoutFive
             link={false}
             theme='theme-three-b'
             textHeader='France'
-            data={data.data.item4}/>
+            data={data.item4}/>
           <LayoutOne
             link={false}
             theme='theme-two-a'
             textHeader='Norway'
-            data={data.data.item5}/>
+            data={data.item5}/>
           <LayoutSix
             link={false}
             theme='theme-five-b'
             textHeader='Turkey'
-            data={data.data.item6}/>
+            data={data.item6}/>
           <LayoutTwo
             link={false}
             theme='theme-four-b'
             textHeader='Europe'
-            data={data.data.item7}/>
+            data={data.item7}/>
         </div>
       </main>
 
@@ -69,6 +75,6 @@ export default function Europe({data}) {
 }
 
 Europe.getInitialProps = async () => {
-  const data = await getData('usnews')
+  const data = await getData('europe')
   return { data }
 }

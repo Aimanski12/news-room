@@ -1,4 +1,5 @@
-import React from 'react'
+import React, {useContext, useEffect} from 'react'
+import {AppData} from '../../utils/context/contextapi'
 import Head from 'next/head'
 import {getData} from '../../utils/api/apis'
 import LayoutSix from '../../components/Layouts/LayoutSix'
@@ -6,8 +7,13 @@ import LayoutOne from '../../components/Layouts/LayoutOne'
 import LayoutFive from '../../components/Layouts/LayoutFive'
 import LayoutTwo from '../../components/Layouts/LayoutTwo'
 import Footer from '../../components/Footer/Footer'
+import Spinner from '../../components/Spinner/Spinner'
 
 export default function Stage({data}) {
+  const {setSpinning, isSpin} = useContext(AppData)
+  useEffect(()=>{
+    setSpinning('loaded', 'Stage')
+  })
 
   return (
     <div className='main-container'>
@@ -15,7 +21,7 @@ export default function Stage({data}) {
         <title>News-Box | Stage</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
+      <Spinner spin={isSpin.spin}/>
       <header className='content-center'>
         <div className="content-center header-wrapper">
           <h1 className="">Header</h1>

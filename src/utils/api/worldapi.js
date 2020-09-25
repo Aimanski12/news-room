@@ -39,7 +39,6 @@ export async function ausnews() {
   const news = await newsData(`${r}australia-news/new-south-wales`)
   const covid = await newsData(`${r}world/coronavirus-outbreak`)
   const sydney = await newsData(`${r}australia-news/sydney`)
-  console.log(news)
   return sortData(politics, covid, news, sydney)
 }
 

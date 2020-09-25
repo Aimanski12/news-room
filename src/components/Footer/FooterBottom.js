@@ -20,7 +20,7 @@ function FooterBottom() {
   return (
     <div className="content-center footer-bottom">
       <span className='display-9 text-head bottom-wrapper'>
-        A project for fun, learning and creavity.</span>
+        A project for fun, learning and creativity.</span>
       <div className='content-center bottom-wrapper'>
         {icons}
       </div>
