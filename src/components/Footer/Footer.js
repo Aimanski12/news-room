@@ -10,7 +10,7 @@ function Footer() {
   
 
   return (
-    <footer className='content-center'>
+    <footer className='content-center footer'>
       <div className="content-center footer-wrapper">
 
         <div className="content-center footer-menu-wrapper">

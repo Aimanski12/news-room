@@ -31,6 +31,9 @@ import '../../styles/footer/footer.css'
 import '../../styles/footer/footer-logo.css'
 import '../../styles/footer/bottom.css'
 
+// news body
+import '../../styles/newsbody/newsbody.css'
+
 // spinner
 import '../../styles/spinner/spinner.css'
 

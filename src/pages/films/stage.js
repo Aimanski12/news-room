@@ -1,5 +1,6 @@
 import React, {useContext, useEffect} from 'react'
 import {AppData} from '../../utils/context/contextapi'
+import Header from '../../components/Header/Header'
 import Head from 'next/head'
 import {getData} from '../../utils/api/apis'
 import LayoutSix from '../../components/Layouts/LayoutSix'
@@ -22,30 +23,26 @@ export default function Stage({data}) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Spinner spin={isSpin.spin}/>
-      <header className='content-center'>
-        <div className="content-center header-wrapper">
-          <h1 className="">Header</h1>
-        </div>
-      </header>
+      <Header />
       <main className='content-center news-body'>
         <div className="content-center body-container">
           <LayoutSix
-            link={false}
+            link='/stage/stage-news'
             theme='theme-one-a'
             textHeader='Stage'
             data={data.item1}/>
           <LayoutFive
-            link={false}
+            link='/stage/theatre'
             theme='theme-two-b'
             textHeader='Theatre'
             data={data.item2}/>
           <LayoutTwo
-            link={false}
+            link='/stage/dance'
             theme='theme-three-a'
             textHeader='Dance'
             data={data.item3}/>
           <LayoutOne
-            link={false}
+            link='/stage/comedy'
             theme='theme-four-b'
             textHeader='Comedy'
             data={data.item4}/>

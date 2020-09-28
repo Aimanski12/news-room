@@ -1,5 +1,6 @@
 import React, {useContext, useEffect} from 'react'
 import {AppData} from '../../utils/context/contextapi'
+import Header from '../../components/Header/Header'
 import Head from 'next/head'
 import {getData} from '../../utils/api/apis'
 import LayoutOne from '../../components/Layouts/LayoutOne'
@@ -23,35 +24,31 @@ export default function Books({data}) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Spinner spin={isSpin.spin}/>
-      <header className='content-center'>
-        <div className="content-center header-wrapper">
-          <h1 className="">Header</h1>
-        </div>
-      </header>
+      <Header />
       <main className='content-center news-body'>
         <div className="content-center body-container">
           <LayoutFive
-            link={false}
+            link='/books/book-news'
             theme='theme-two-a'
             textHeader='Books'
             data={data.item1}/>
           <LayoutFour
-            link={false}
+            link='/books/blogs'
             theme='theme-one-b'
             textHeader='Blog'
             data={data.item2}/>
           <LayoutOne
-            link={false}
+            link='/books/fiction'
             theme='theme-four-a'
             textHeader='Fiction'
             data={data.item3}/>
           <LayoutSix
-            link={false}
+            link='/books/price'
             theme='theme-five-b'
             textHeader='Price'
             data={data.item4}/>
           <LayoutTwo
-            link={false}
+            link='/books/adult'
             theme='theme-three-b'
             textHeader='Adult'
             data={data.item5}/>

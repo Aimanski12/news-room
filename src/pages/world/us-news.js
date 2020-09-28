@@ -1,5 +1,6 @@
 import React, {useContext, useEffect} from 'react'
 import {AppData} from '../../utils/context/contextapi'
+import Header from '../../components/Header/Header'
 import Head from 'next/head'
 import Footer from '../../components/Footer/Footer'
 import {getData} from '../../utils/api/apis'
@@ -21,30 +22,26 @@ export default function UsNews({data}) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Spinner spin={isSpin.spin}/>
-      <header className='content-center'>
-        <div className="content-center header-wrapper">
-          <h1 className="">Header</h1>
-        </div>
-      </header>
+      <Header />
       <main className='content-center news-body'>
         <div className="content-center body-container">
           <LayoutThree
-            link={false}
+            link={'/world/us-politics'}
             theme='theme-three-a'
             textHeader='Politics'
             data={data.item2}/>
           <LayoutTwo
-            link={false}
+            link={'/world/us-elections'}
             theme='theme-four-b'
             textHeader='Elections'
             data={data.item1}/>
           <LayoutFour
-            link={false}
+            link={'/world/us-covid-19'}
             theme='theme-five-a'
             textHeader='Covid-19'
             data={data.item3}/>
           <LayoutFive
-            link={false}
+            link={'/world/us-schools'}
             theme='theme-two-b'
             textHeader='Schools'
             data={data.item4}/>

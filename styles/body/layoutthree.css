@@ -47,6 +47,11 @@
   transition: all 0.3s ease-in;
 }
 
+.layout-three .news-item a{
+  text-decoration: none;
+}
+
+
 .layout-three .news-item p {
   font-weight: 500;
   margin-bottom: 8px;

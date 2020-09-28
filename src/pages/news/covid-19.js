@@ -1,5 +1,6 @@
 import React, {useContext, useEffect} from 'react'
 import {AppData} from '../../utils/context/contextapi'
+import Header from '../../components/Header/Header'
 import Head from 'next/head'
 import {getData} from '../../utils/api/apis'
 import LayoutThree from '../../components/Layouts/LayoutThree'
@@ -22,31 +23,27 @@ export default function Covid({data}) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Spinner spin={isSpin.spin}/>
-      <header className='content-center'>
-        <div className="content-center header-wrapper">
-          <h1 className="">Header</h1>
-        </div>
-      </header>
+      <Header />
       <main className='content-center news-body'>
         <div className="content-center body-container">
           <LayoutFive 
-            link={false}
+            link='/news/us-covid-19'
             theme='theme-four-a'
             textHeader='US'
             data={data.item1}/>
           <LayoutFour 
             theme='theme-three-b'
-            link={false}
+            link='/news/uk-covid-19'
             textHeader='UK'
             data={data.item2}/>
           <LayoutThree 
             theme='theme-two-b'
-            link={false}
+            link='/news/australia-covid-19'
             textHeader='Australia'
             data={data.item3}/>
           <LayoutSix 
             theme='theme-one-b'
-            link={false}
+            link='/news/related-news'
             textHeader='Related'
             data={data.item4}/>
         </div>

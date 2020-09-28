@@ -1,14 +1,15 @@
 
-.theme-one-a .left a, 
-.theme-one-b .left a,
-.theme-one-a .left, 
+.theme-one-a .left a, .theme-one-b .left a, .theme-one-a .left, 
 .theme-one-b .left {
   color:#145794
 }
 
+.theme-one-a .news-item a, .theme-one-b .news-item a{
+  color:#145794;
+}
+
 .theme-one-a .news-item, .theme-one-b .news-item {
   background: #EEF7FF;
-  color:#145794;
 }
 
 .theme-one-a .news-item:hover, .theme-one-b .news-item:hover {
@@ -16,9 +17,12 @@
   transition: all 0.3s ease-in;
 }
 
+.theme-one-a .item-1 a, .theme-one-a .item-2 a{
+  color: #FFD6D6;
+}
+
 .theme-one-a .item-1, .theme-one-a .item-2 {
   background: #145794;
-  color: #FFD6D6;
 }
 
 .theme-one-a .item-1:hover, .theme-one-a .item-2:hover{
@@ -27,9 +31,12 @@
 }
 
 /* theme one B */
+.theme-one-b .item-1 a, .theme-one-b .item-2 a{
+  color:#145794;
+}
+
 .theme-one-b .item-1, .theme-one-b .item-2 {
   background: #EEF7FF;
-  color:#145794;
 }
 
 .theme-one-b .item-1:hover, .theme-one-b .item-2:hover{

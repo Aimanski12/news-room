@@ -1,5 +1,6 @@
 import React, {useContext, useEffect} from 'react'
 import {AppData} from '../../utils/context/contextapi'
+import Header from '../../components/Header/Header'
 import Head from 'next/head'
 import {getData} from '../../utils/api/apis'
 import LayoutOne from '../../components/Layouts/LayoutOne'
@@ -24,40 +25,42 @@ export default function News({data}) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Spinner spin={isSpin.spin}/>
-      <header className='content-center'>
-        <div className="content-center header-wrapper">
-          <h1 className="">Header</h1>
-        </div>
-      </header>
+      <Header />
       <main className='content-center news-body'>
         <div className="content-center body-container">
           <LayoutOne 
             link='/news/covid-19'
+            fromIndex={true}
             theme='theme-two-a'
             textHeader='Covid-19'
             data={data.item1}/>
           <LayoutTwo 
             theme='theme-three-a'
+            fromIndex={true}
             link='/news/politics'
             textHeader='Politics'
             data={data.item2}/>
           <LayoutThree 
             theme='theme-four-b'
+            fromIndex={true}
             link='/news/environment'
             textHeader='Environment'
             data={data.item3}/>
           <LayoutFour 
             theme='theme-five-b'
+            fromIndex={true}
             link='/news/technology'
             textHeader='Technology'
             data={data.item4}/>
           <LayoutFive 
             theme='theme-three-a'
+            fromIndex={true}
             link='/news/science'
             textHeader='Science'
             data={data.item5}/>
           <LayoutSix 
             theme='theme-five-b'
+            fromIndex={true}
             link='/news/education'
             textHeader='Education'
             data={data.item6}/>

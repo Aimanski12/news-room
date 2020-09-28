@@ -1,5 +1,6 @@
 import React, {useContext, useEffect} from 'react'
 import {AppData} from '../../utils/context/contextapi'
+import Header from '../../components/Header/Header'
 import Head from 'next/head'
 import {getData} from '../../utils/api/apis'
 import LayoutTwo from '../../components/Layouts/LayoutTwo'
@@ -22,30 +23,26 @@ export default function Lifestyle({data}) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Spinner spin={isSpin.spin}/>
-      <header className='content-center'>
-        <div className="content-center header-wrapper">
-          <h1 className="">Header</h1>
-        </div>
-      </header>
+      <Header />
       <main className='content-center news-body'>
         <div className="content-center body-container">
           <LayoutThree
-            link={false}
+            link='/relationships/relationship-news'
             theme='theme-five-a'
             textHeader='Relationship'
             data={data.item1}/>
           <LayoutTwo
-            link={false}
+            link='/relationships/sexuality'
             theme='theme-four-b'
             textHeader='Sexuality'
             data={data.item2}/>
           <LayoutFive
-            link={false}
+            link='/relationships/health'
             theme='theme-two-a'
             textHeader='Health'
             data={data.item3}/>
           <LayoutFour
-            link={false}
+            link='/relationships/pets'
             theme='theme-three-b'
             textHeader='Pets'
             data={data.item4}/>

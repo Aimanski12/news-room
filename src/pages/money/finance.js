@@ -1,5 +1,6 @@
 import React, {useContext, useEffect} from 'react'
 import {AppData} from '../../utils/context/contextapi'
+import Header from '../../components/Header/Header'
 import Head from 'next/head'
 import {getData} from '../../utils/api/apis'
 import LayoutFive from '../../components/Layouts/LayoutFive'
@@ -22,30 +23,26 @@ export default function Money({data}) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Spinner spin={isSpin.spin}/>
-      <header className='content-center'>
-        <div className="content-center header-wrapper">
-          <h1 className="">Header</h1>
-        </div>
-      </header>
+      <Header />
       <main className='content-center news-body'>
         <div className="content-center body-container">
           <LayoutTwo
-            link={false}
+            link='/finance/business'
             theme='theme-five-a'
             textHeader='Business'
             data={data.item2}/>
           <LayoutFive
-            link={false}
+            link='/finance/debt'
             theme='theme-four-b'
             textHeader='Debt'
             data={data.item3}/>
           <LayoutThree
-            link={false}
+            link='/finance/money'
             theme='theme-one-a'
             textHeader='Money'
             data={data.item1}/>
           <LayoutFour
-            link={false}
+            link='/finance/consumer'
             theme='theme-three-b'
             textHeader='Consumer'
             data={data.item4}/>

@@ -1,5 +1,6 @@
 import React, {useContext, useEffect} from 'react'
 import {AppData} from '../../utils/context/contextapi'
+import Header from '../../components/Header/Header'
 import Head from 'next/head'
 import {getData} from '../../utils/api/apis'
 import LayoutOne from '../../components/Layouts/LayoutOne'
@@ -23,36 +24,32 @@ export default function Environment({data}) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Spinner spin={isSpin.spin}/>
-      <header className='content-center'>
-        <div className="content-center header-wrapper">
-          <h1 className="">Header</h1>
-        </div>
-      </header>
+      <Header />
       <main className='content-center news-body'>
         <div className="content-center body-container">
           <LayoutThree 
             theme='theme-four-a'
-            link={false}
+            link='/environment/climate-change'
             textHeader='Climate Change'
             data={data.item3}/>
           <LayoutOne 
-            link={false}
+            link='/environment/wildlife'
             theme='theme-one-b'
             textHeader='Wildlife'
             data={data.item1}/>
           <LayoutTwo 
             theme='theme-three-b'
-            link={false}
+            link='/environment/marine-life'
             textHeader='Marine Life'
             data={data.item2}/>
           <LayoutFour 
             theme='theme-five-b'
-            link={false}
+            link='/environment/farming'
             textHeader='Farming'
             data={data.item4}/>
           <LayoutFive 
             theme='theme-three-a'
-            link={false}
+            link='/environment/fossil-fuels'
             textHeader='Fossil Fuels'
             data={data.item5}/>
         </div>

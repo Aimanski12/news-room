@@ -1,5 +1,6 @@
 import React, {useContext, useEffect} from 'react'
 import {AppData} from '../../utils/context/contextapi'
+import Header from '../../components/Header/Header'
 import Head from 'next/head'
 import {getData} from '../../utils/api/apis'
 import LayoutOne from '../../components/Layouts/LayoutOne'
@@ -23,35 +24,31 @@ export default function Fashion({data}) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Spinner spin={isSpin.spin}/>
-      <header className='content-center'>
-        <div className="content-center header-wrapper">
-          <h1 className="">Header</h1>
-        </div>
-      </header>
+      <Header />
       <main className='content-center news-body'>
         <div className="content-center body-container">
           <LayoutFour
-            link={false}
+            link='/fashion/milan'
             theme='theme-one-a'
             textHeader='Milan'
             data={data.item1}/>
           <LayoutThree
-            link={false}
+            link='/fashion/paris'
             theme='theme-five-b'
             textHeader='Paris'
             data={data.item2}/>
           <LayoutSix
-            link={false}
+            link='/fashion/beauty'
             theme='theme-three-a'
             textHeader='Beauty'
             data={data.item3}/>
           <LayoutFive
-            link={false}
+            link='/fashion/dress'
             theme='theme-four-b'
             textHeader='Dress'
             data={data.item4}/>
           <LayoutOne
-            link={false}
+            link='/fashion/fragrance'
             theme='theme-two-b'
             textHeader='Fragrance'
             data={data.item5}/>

@@ -2,16 +2,16 @@
 
 
 
-.theme-three-a .left a,
-.theme-three-b .left a,
-.theme-three-a .left,
-.theme-three-b .left {
+.theme-three-a .left a, .theme-three-b .left a, .theme-three-a .left, .theme-three-b .left {
   color:#CD8949
+}
+
+.theme-three-a .news-item a, .theme-three-b .news-item a{
+  color:#CD8949;
 }
 
 .theme-three-a .news-item, .theme-three-b .news-item {
   background: #EDEDED;
-  color:#CD8949;
 }
 
 .theme-three-a .news-item:hover, .theme-three-b .news-item:hover {
@@ -19,9 +19,12 @@
   transition: all 0.3s ease-in;
 }
 
+.theme-three-a .item-1 a, .theme-three-a .item-2 a{
+  color: #FFFFFF;
+}
+
 .theme-three-a .item-1, .theme-three-a .item-2 {
   background: #CD8949;
-  color: #FFFFFF;
 }
 
 .theme-three-a .item-1:hover, .theme-three-a .item-2:hover{
@@ -30,9 +33,12 @@
 }
 
 /* theme one B */
+.theme-three-b .item-1 a, .theme-three-b .item-2 a{
+  color:#CD8949;
+}
+
 .theme-three-b .item-1, .theme-three-b .item-2 {
   background: #EDEDED;
-  color:#CD8949;
 }
 
 .theme-three-b .item-1:hover, .theme-three-b .item-2:hover{

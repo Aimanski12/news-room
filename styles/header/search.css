@@ -4,8 +4,6 @@
   grid-column-end: 4;
   grid-row-start: 1;
   grid-row-end: 2;
-  
-  background: rgba(210,210,210,0.1);
 }
 
 .search-input-short {
@@ -66,124 +64,45 @@
   fill: #524D1F
 }
 
-
 @media (max-width: 968px){
-  .navbar-search {
-
-    grid-column-start: 3;
-    grid-column-end: 4;
-    grid-row-start: 1;
-    grid-row-end: 2;
-
-    background: rgba(210, 210, 210, 0.1);
-  }
-
-  .search-input-short {
-
-    display: none;
-  }
-
-  .search-input-wide {
-
-    flex-direction: row;
-  }
-
   .search-input-wide input {
     width: 138px;
-
-    height: 30px;
-    border: none;
-    border-radius: 8px 0 0 8px;
-    padding-left: 12px;
-    background: rgba(218, 199, 27, 0.2);
-    color: #C3C2B6;
-    letter-spacing: -0.5px;
   }
-
-  .search-input-wide input:focus {
-
-    outline: none;
-  }
-
-  .search-input-wide button {
-
-    width: 30px;
-    height: 30px;
-    background: #DAC71B;
-    border: 0;
-    border-radius: 0 8px 8px 0;
-    transition: all 0.2s ease-in
-  }
-
-  .search-input-wide button:hover {
-    background: #F1E043;
-    transition: all 0.2s ease-in
-  }
-
-  .search-input-wide svg {
-    width: 18px;
-  }
-
-  .search-input-wide svg path {
-    fill: #524D1F
-  }
-
 }
-
 
 @media (max-width: 868px) {
   .navbar-search {
     display: block;
-    
-    grid-column-start: 3;
-    grid-column-end: 4;
-    grid-row-start: 1;
-    grid-row-end: 2;
-    background: rgba(210, 210, 210, 0.1);
   }
-
   .search-input-wide {
     display: none;
-
   }
-
   .search-input-short {
     display: block;
-
   }
-
   .input-search-btn{
     margin-right: 20px;
     width: 60px;
     height: 60px;
     float: right;
-
-    
-  }
-  
+  }  
   .input-search-btn span{
     width: 22px;
     height: 22px;
-    
   }
-  
   .input-search-btn span svg{
     width: 100%;
     height: 100%;
   }
-
   .input-search-btn span svg path, .search-small-btn-close span path {
     fill: #DAC71B;
     transition: all 0.2s ease-in;
   }
-
   .input-search-btn span:hover path, .search-small-btn-close span:hover path {
      cursor: pointer;
      fill: #F1E043;
      transition: all 0.2s ease-in;
-
   }
-
   .search-small-container {
     position: fixed;
     width: 320px;
@@ -193,44 +112,32 @@
     top: 0;
     padding-right: 10px;
     background: rgba(5, 41, 98, 0.95);
-    /* overflow-y: scroll; */
     transition: 0.2s ease-in;
-
   }
-
   .show-search-bar {
     right: 0;
     transition: all 0.2s ease-in;
   }
-
   .search-small-btn-close {
     width: 100%;
     height: 27px;
     margin-top: 25px;
-
   }
-
   .search-small-btn-close span {
     width: 22px;
     height: 22px;
     margin-right: 20px;
     float: right;
-  
   }
-  
   .search-small-btn-close span svg {
     width: 100%;
     height: 100%
-  
   }
-
   .side-search-bar {
     margin-top: 10px;
     width: 88%;
     margin: 20px 6% 0 6%
-
   }
-
   .side-search-bar input{
     height: 38px;
     width: calc(100% - 24px);
@@ -241,35 +148,23 @@
     background: #F1F1F1;
     color: #857F7F;
     letter-spacing: -0.5px;
-
-
   }
-
   .side-search-bar input:hover, .side-search-bar button:hover {
     cursor: pointer;
   }
-
   .side-search-bar input:focus, .side-search-bar button:focus {
     outline: none
-    
   }
-
-
   .side-search-bar input::placeholder {
     color: #857F7F;
     opacity: 1;
-
   }
-
   .side-search-bar input:-ms-input-placeholder {
     color: #857F7F
   }
-
   .side-search-bar input::-ms-input-placeholder {
     color: #857F7F
   }
-
-
   .side-search-bar button {
     margin-top: 10px;
     width: 100%;
@@ -280,20 +175,37 @@
     color: #524D1F;
     letter-spacing: -0.5px;
     transition: all 0.2s ease-in;
-
   }
-
   .side-search-bar button:hover{
     background: #F1E043;
     transition: all 0.2s ease-in;
   }
-
 }
 
+@media (max-width: 668px) {
+  .input-search-btn{
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+  }
+}
 
+@media (max-width: 468px) {
+  .input-search-btn{
+    margin-right: 10px;
+  }
+}
 
-/* <div className="side-search-bar">
-  <input type="text" placeholder='Enter Keywords'/>
-  <button>Search</button>
-</div> */
+@media (max-width: 380px) {
+  .search-small-container {
+    width: 100%;
+    overflow-x: hidden;
+    right: -390px;
+  }
+  .show-search-bar {
+    right: 0;
+    transition: all 0.2s ease-in;
+  }
+}
+
 

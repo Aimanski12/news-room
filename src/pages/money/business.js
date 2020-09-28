@@ -1,5 +1,6 @@
 import React, {useContext, useEffect} from 'react'
 import {AppData} from '../../utils/context/contextapi'
+import Header from '../../components/Header/Header'
 import Head from 'next/head'
 import {getData} from '../../utils/api/apis'
 import LayoutFive from '../../components/Layouts/LayoutFive'
@@ -23,35 +24,31 @@ export default function Business({data}) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Spinner spin={isSpin.spin}/>
-      <header className='content-center'>
-        <div className="content-center header-wrapper">
-          <h1 className="">Header</h1>
-        </div>
-      </header>
+      <Header />
       <main className='content-center news-body'>
         <div className="content-center body-container">
           <LayoutThree
-            link={false}
+            link='/business/economy'
             theme='theme-one-a'
             textHeader='Economy'
             data={data.item1}/>
           <LayoutSix
-            link={false}
+            link='/business/stocks'
             theme='theme-five-b'
             textHeader='Stocks'
             data={data.item2}/>
           <LayoutFour
-            link={false}
+            link='/business/supermarket'
             theme='theme-two-a'
             textHeader='Supermarket'
             data={data.item3}/>
           <LayoutFive
-            link={false}
+            link='/business/retails'
             theme='theme-four-b'
             textHeader='Retails'
             data={data.item4}/>
           <LayoutOne
-            link={false}
+            link='/business/richlist'
             theme='theme-three-b'
             textHeader='Richlist'
             data={data.item5}/>

@@ -1,5 +1,6 @@
 import React, {useContext, useEffect} from 'react'
 import {AppData} from '../../utils/context/contextapi'
+import Header from '../../components/Header/Header'
 import Head from 'next/head'
 import {getData} from '../../utils/api/apis'
 import LayoutOne from '../../components/Layouts/LayoutOne'
@@ -23,35 +24,31 @@ export default function Travel({data}) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Spinner spin={isSpin.spin}/>
-      <header className='content-center'>
-        <div className="content-center header-wrapper">
-          <h1 className="">Header</h1>
-        </div>
-      </header>
+      <Header />
       <main className='content-center news-body'>
         <div className="content-center body-container">
           <LayoutOne
-            link={false}
+            link='/travel/cruise'
             theme='theme-four-a'
             textHeader='Cruise'
             data={data.item1}/>
           <LayoutSix
-            link={false}
+            link='/travel/adventure'
             theme='theme-three-b'
             textHeader='Adventure'
             data={data.item2}/>
           <LayoutThree
-            link={false}
+            link='/travel/hostels'
             theme='theme-one-a'
             textHeader='Hostels'
             data={data.item3}/>
           <LayoutTwo
-            link={false}
+            link='/travel/flights'
             theme='theme-two-b'
             textHeader='Flights'
             data={data.item4}/>
           <LayoutFour
-            link={false}
+            link='/travel/day-trips'
             theme='theme-five-b'
             textHeader='Day Trips'
             data={data.item5}/>

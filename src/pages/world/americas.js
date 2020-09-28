@@ -1,5 +1,6 @@
 import React, {useContext, useEffect} from 'react'
 import {AppData} from '../../utils/context/contextapi'
+import Header from '../../components/Header/Header'
 import Head from 'next/head'
 import {getData} from '../../utils/api/apis'
 import LayoutSix from '../../components/Layouts/LayoutSix'
@@ -22,30 +23,26 @@ export default function Americas({data}) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Spinner spin={isSpin.spin}/>
-      <header className='content-center'>
-        <div className="content-center header-wrapper">
-          <h1 className="">Header</h1>
-        </div>
-      </header>
+      <Header />
       <main className='content-center news-body'>
         <div className="content-center body-container">
           <LayoutSix
-            link={false}
+            link='/world/brazil'
             theme='theme-three-a'
             textHeader='Brazil'
             data={data.item1}/>
           <LayoutOne
-            link={false}
+            link='/world/mexico'
             theme='theme-two-b'
             textHeader='Mexico'
             data={data.item2}/>
           <LayoutTwo
-            link={false}
+            link='/world/argentina'
             theme='theme-four-a'
             textHeader='Argentina'
             data={data.item3}/>
           <LayoutThree
-            link={false}
+            link='/world/american-continent'
             theme='theme-one-b'
             textHeader='Americas'
             data={data.item4}/>

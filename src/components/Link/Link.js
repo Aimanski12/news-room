@@ -5,7 +5,7 @@ import Link from 'next/link'
 function LinkText(props) {
   const {setSpinning} = useContext(AppData)
 
-   let header = props.link ? (
+   let header = props.fromIndex ? (
       <Link href={props.link} as={props.link}>
         <a>
           <h2 

@@ -1,5 +1,6 @@
 import React, {useContext, useEffect} from 'react'
 import {AppData} from '../../utils/context/contextapi'
+import Header from '../../components/Header/Header'
 import Head from 'next/head'
 import {getData} from '../../utils/api/apis'
 import LayoutOne from '../../components/Layouts/LayoutOne'
@@ -23,35 +24,31 @@ export default function Food({data}) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Spinner spin={isSpin.spin}/>
-      <header className='content-center'>
-        <div className="content-center header-wrapper">
-          <h1 className="">Header</h1>
-        </div>
-      </header>
+      <Header />
       <main className='content-center news-body'>
         <div className="content-center body-container">
           <LayoutSix
-            link={false}
+            link='/food/food-news'
             theme='theme-three-a'
             textHeader='Food'
             data={data.item1}/>
           <LayoutFive
-            link={false}
+            link='/food/vegetables'
             theme='theme-two-b'
             textHeader='Vegetables'
             data={data.item2}/>
           <LayoutTwo
-            link={false}
+            link='/food/meat'
             theme='theme-five-a'
             textHeader='Meat'
             data={data.item3}/>
           <LayoutOne
-            link={false}
+            link='/food/fruit'
             theme='theme-one-b'
             textHeader='Fruit'
             data={data.item4}/>
           <LayoutThree
-            link={false}
+            link='/food/chefs'
             theme='theme-four-b'
             textHeader='Chefs'
             data={data.item5}/>

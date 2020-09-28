@@ -1,16 +1,16 @@
 
 
 
-.theme-four-a .left a,
-.theme-four-b .left a,
-.theme-four-a .left,
-.theme-four-b .left {
+.theme-four-a .left a, .theme-four-b .left a, .theme-four-a .left, .theme-four-b .left {
   color:#BF41BF
+}
+
+.theme-four-a .news-item a, .theme-four-b .news-item a{
+  color:#BF41BF;
 }
 
 .theme-four-a .news-item, .theme-four-b .news-item {
   background: #EDEDED;
-  color:#BF41BF;
 }
 
 .theme-four-a .news-item:hover, .theme-four-b .news-item:hover {
@@ -18,9 +18,13 @@
   transition: all 0.3s ease-in;
 }
 
+.theme-four-a .item-1 a, .theme-four-a .item-2 a {
+  color: #FFFFFF;
+}
+
+
 .theme-four-a .item-1, .theme-four-a .item-2 {
   background: #BF41BF;
-  color: #FFFFFF;
 }
 
 .theme-four-a .item-1:hover, .theme-four-a .item-2:hover{
@@ -28,10 +32,13 @@
   transition: all 0.3s ease-in;
 }
 
+.theme-four-b .item-1 a, .theme-four-b .item-2 a{
+  color:#BF41BF;
+}
+
 /* theme one B */
 .theme-four-b .item-1, .theme-four-b .item-2 {
   background: #EDEDED;
-  color:#BF41BF;
 }
 
 .theme-four-b .item-1:hover, .theme-four-b .item-2:hover{

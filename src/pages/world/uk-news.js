@@ -1,5 +1,6 @@
 import React, {useContext, useEffect} from 'react'
 import {AppData} from '../../utils/context/contextapi'
+import Header from '../../components/Header/Header'
 import Head from 'next/head'
 import {getData} from '../../utils/api/apis'
 import LayoutSix from '../../components/Layouts/LayoutSix'
@@ -22,30 +23,26 @@ export default function UkNews({data}) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Spinner spin={isSpin.spin}/>
-      <header className='content-center'>
-        <div className="content-center header-wrapper">
-          <h1 className="">Header</h1>
-        </div>
-      </header>
+      <Header />
       <main className='content-center news-body'>
         <div className="content-center body-container">
           <LayoutThree
-            link={false}
+            link='/world/uk-politics'
             theme='theme-five-a'
             textHeader='Politics'
             data={data.item1}/>
           <LayoutFour
-            link={false}
+            link='/world/uk-covid-19'
             theme='theme-four-b'
             textHeader='Covid-19'
             data={data.item2}/>
           <LayoutFive
-            link={false}
+            link='/world/uk-news'
             theme='theme-one-a'
             textHeader='News'
             data={data.item3}/>
           <LayoutSix
-            link={false}
+            link='/world/uk-sports'
             theme='theme-three-b'
             textHeader='Sports'
             data={data.item4}/>

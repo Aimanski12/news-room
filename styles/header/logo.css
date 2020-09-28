@@ -4,9 +4,7 @@
   grid-column-end: 2;
   grid-row-start: 1;
   grid-row-end: 3;
-  background: rgba(190,190,190,.05);
 }
-
 
 .navbar-logo a {
   width: 120px;
@@ -30,25 +28,17 @@
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 2;
-
-    background: rgba(190, 190, 190, .05);
   }
-
-
   .navbar-logo a {
     width: 100px;
-
-    height: 50px;
   }
-
-  .navbar-logo a svg {
-
-    width: 100%
-  }
-
   .text-logo {
-
     display: none;
   }
 }
 
+@media (max-width: 668px) {
+  .navbar-logo a {
+    width: 85px;
+  }
+}

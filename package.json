@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "animejs": "^3.2.0",
     "axios": "^0.20.0",
     "guardian-js": "^3.0.0",
     "html-react-parser": "^0.14.0",

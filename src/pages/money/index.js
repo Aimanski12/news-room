@@ -1,5 +1,6 @@
 import React, {useContext, useEffect} from 'react'
 import {AppData} from '../../utils/context/contextapi'
+import Header from '../../components/Header/Header'
 import Head from 'next/head'
 import {getData} from '../../utils/api/apis'
 import LayoutOne from '../../components/Layouts/LayoutOne'
@@ -23,35 +24,36 @@ export default function Money({data}) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Spinner spin={isSpin.spin}/>
-      <header className='content-center'>
-        <div className="content-center header-wrapper">
-          <h1 className="">Header</h1>
-        </div>
-      </header>
+      <Header />
       <main className='content-center news-body'>
         <div className="content-center body-container">
           <LayoutTwo
             link={'/money/finance'}
+            fromIndex={true}
             theme='theme-five-a'
             textHeader='Finance'
             data={data.item1}/>
           <LayoutOne
             link={'/money/business'}
+            fromIndex={true}
             theme='theme-four-b'
             textHeader='Business'
             data={data.item2}/>
           <LayoutFour
             link={'/money/investment'}
+            fromIndex={true}
             theme='theme-three-a'
             textHeader='Investment'
             data={data.item3}/>
           <LayoutThree
             link={'/money/realestate'}
+            fromIndex={true}
             theme='theme-two-b'
             textHeader='Realestate'
             data={data.item4}/>
           <LayoutFive
             link={'/money/work'}
+            fromIndex={true}
             theme='theme-one-b'
             textHeader='Work'
             data={data.item5}/>

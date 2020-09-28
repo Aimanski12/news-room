@@ -1,5 +1,6 @@
 import React, {useContext, useEffect} from 'react'
 import {AppData} from '../../utils/context/contextapi'
+import Header from '../../components/Header/Header'
 import Head from 'next/head'
 import {getData} from '../../utils/api/apis'
 import LayoutThree from '../../components/Layouts/LayoutThree'
@@ -22,31 +23,27 @@ export default function Education({data}) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Spinner spin={isSpin.spin}/>
-      <header className='content-center'>
-        <div className="content-center header-wrapper">
-          <h1 className="">Header</h1>
-        </div>
-      </header>
+      <Header />
       <main className='content-center news-body'>
         <div className="content-center body-container">
           <LayoutFive 
-            link={false}
+            link='/education/universities'
             theme='theme-three-a'
             textHeader='University'
             data={data.item1}/>
           <LayoutThree 
-            link={false}
+            link='/education/freshers'
             theme='theme-four-b'
             textHeader='Freshers'
             data={data.item2}/>
           <LayoutFour 
             theme='theme-two-b'
-            link={false}
+            link='/education/students'
             textHeader='Students'
             data={data.item3}/>
           <LayoutSix 
             theme='theme-one-b'
-            link={false}
+            link='/education/medical-research'
             textHeader='Medical Research'
             data={data.item4}/>
         </div>

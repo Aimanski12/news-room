@@ -1,5 +1,6 @@
 import React, {useContext, useEffect} from 'react'
 import {AppData} from '../../utils/context/contextapi'
+import Header from '../../components/Header/Header'
 import Head from 'next/head'
 import {getData} from '../../utils/api/apis'
 import LayoutTwo from '../../components/Layouts/LayoutTwo'
@@ -23,35 +24,36 @@ export default function Lifestyles({data}) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Spinner spin={isSpin.spin}/>
-      <header className='content-center'> 
-        <div className="content-center header-wrapper">
-          <h1 className="">Header</h1>
-        </div>
-      </header>
+      <Header />
       <main className='content-center news-body'>
         <div className="content-center body-container">
           <LayoutTwo 
             link={'/lifestyles/relationship'}
+            fromIndex={true}
             theme='theme-four-a'
             textHeader='Relationship'
             data={data.item1}/>
           <LayoutOne
             link={'/lifestyles/fashion'}
+            fromIndex={true}
             theme='theme-five-b'
             textHeader='Fashion'
             data={data.item2}/>
           <LayoutFour
             link={'/lifestyles/books'}
+            fromIndex={true}
             theme='theme-one-b'
             textHeader='Books'
             data={data.item3}/>
           <LayoutThree
             link={'/lifestyles/food'}
+            fromIndex={true}
             theme='theme-two-a'
             textHeader='Food'
             data={data.item4}/>
           <LayoutFive
             link={'/lifestyles/travel'}
+            fromIndex={true}
             theme='theme-three-b'
             textHeader='Travel'
             data={data.item5}/>

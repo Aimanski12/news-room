@@ -32,36 +32,43 @@ export default function World({data}) {
         <div className="content-center body-container">
           <LayoutOne
             link={'/world/us-news'}
+            fromIndex={true}
             theme='theme-three-a'
             textHeader='US'
             data={data.item1}/>
           <LayoutTwo
             link={'/world/uk-news'}
+            fromIndex={true}
             theme='theme-two-b'
             textHeader='UK'
             data={data.item2}/>
           <LayoutThree
             link={'/world/australia'}
+            fromIndex={true}
             theme='theme-four-a'
             textHeader='Australia'
             data={data.item3}/>
           <LayoutFour
             link={'/world/asia-news'}
+            fromIndex={true}
             theme='theme-one-b'
             textHeader='Asia'
             data={data.item4}/>
           <LayoutFive
             link={'/world/americas'}
-            theme='theme-five-b'
+            fromIndex={true}
+            theme='theme-five-a'
             textHeader='Americas'
             data={data.item5}/>
           <LayoutSix
             link={'/world/africa'}
+            fromIndex={true}
             theme='theme-three-a'
             textHeader='Africa'
             data={data.item6}/>
           <LayoutTwo
             link={'/world/europe'}
+            fromIndex={true}
             theme='theme-two-b'
             textHeader='Europe'
             data={data.item7}/>

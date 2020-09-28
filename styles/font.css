@@ -14,7 +14,7 @@
 } 
 
 /* font types */
-.display-1 {
+.display-1, .news-body-content h1 {
   font-size: 1.9em;
   line-height: 1.1em;
 }
@@ -24,7 +24,7 @@
   line-height: 1.08em;
 }
 
-.display-3 {
+.display-3, .news-body-content h2 {
   font-size: 1.6em;
   line-height: 1.07em;
 }
@@ -44,7 +44,7 @@
   line-height: 1.05em;
 }
 
-.display-7 {
+.display-7, .news-body-content p, .news-body-content li {
   font-size: 1.2em;
   line-height: 1.05em;
 }
@@ -55,7 +55,7 @@
   line-height: 1.04em;
 
 }
-.display-9 {
+.display-9, .news-body-content figcaption {
   letter-spacing: -0.8px;
   font-size: 1em;
 }
@@ -70,13 +70,13 @@
 
 @media (max-width: 1168px){
   /* font types */
-  .display-1 {
+  .display-1, .news-body-content h1 {
     font-size: 1.85em;
   }
   .display-2 {
     font-size: 1.65em;
   }
-  .display-3 {
+  .display-3, .news-body-content h2 {
     font-size: 1.55em;
   }
   .display-4 {
@@ -88,25 +88,25 @@
   .display-6 {
     font-size: 1.26em;
   }
-  .display-7 {
+  .display-7, .news-body-content p, .news-body-content li {
     font-size: 1.17em;
   }
   .display-8 {
     font-size: 1.07em;
   }
-  .display-9 {
+  .display-9, .news-body-content figcaption {
     font-size: .98em;
   }
 }
 
 @media (max-width: 1068px) {
-  .display-1 {
+  .display-1, .news-body-content h1 {
     font-size: 1.8em;
   }
   .display-2 {
     font-size: 1.61em;
   }
-  .display-3 {
+  .display-3, .news-body-content h2 {
     font-size: 1.51em;
   }
   .display-4 {
@@ -118,13 +118,13 @@
   .display-6 {
     font-size: 1.23em;
   }
-  .display-7 {
+  .display-7, .news-body-content p, .news-body-content li {
     font-size: 1.14em;
   }
   .display-8 {
     font-size: 1.05em;
   }
-  .display-9 {
+  .display-9, .news-body-content figcaption {
     font-size: .96em;
   }
   .display-10 {
@@ -136,13 +136,13 @@
 }
 
 @media (max-width: 968px) {
-  .display-1 {
+  .display-1, .news-body-content h1 {
     font-size: 1.75em;
   }
   .display-2 {
     font-size: 1.56em;
   }
-  .display-3 {
+  .display-3, .news-body-content h2 {
     font-size: 1.47em;
   }
   .display-4 {
@@ -160,19 +160,19 @@
   .display-8 {
     font-size: 1.03em;
   }
-  .display-9 {
+  .display-9, .news-body-content figcaption {
     font-size: .95em;
   }
 }
 
 @media (max-width: 868px) {
-  .display-1 {
+  .display-1, .news-body-content h1 {
     font-size: 1.7em;
   }
   .display-2 {
     font-size: 1.52em;
   }
-  .display-3 {
+  .display-3, .news-body-content h2 {
     font-size: 1.43em;
   }
   .display-4 {
@@ -184,13 +184,13 @@
   .display-6 {
     font-size: 1.16em;
   }
-  .display-7 {
+  .display-7, .news-body-content p, .news-body-content li {
     font-size: 1.09em;
   }
   .display-8 {
     font-size: 1.01em;
   }
-  .display-9 {
+  .display-9, .news-body-content figcaption {
     font-size: .93em;
   }
   .display-10 {
@@ -202,13 +202,13 @@
 }
 
 @media (max-width: 768px) {
-  .display-1 {
+  .display-1, .news-body-content h1 {
     font-size: 1.65em;
   }
   .display-2 {
     font-size: 1.48em;
   }
-  .display-3 {
+  .display-3, .news-body-content h2 {
     font-size: 1.39em;
   }
   .display-4 {
@@ -220,25 +220,25 @@
   .display-6 {
     font-size: 1.13em;
   }
-  .display-7 {
+  .display-7, .news-body-content p, .news-body-content li {
     font-size: 1.09em;
   }
   .display-8 {
     font-size: .99em;
   }
-  .display-9 {
+  .display-9, .news-body-content figcaption {
     font-size: .92em;
   }
 }
 
 @media (max-width: 668px) {
-  .display-1 {
+  .display-1, .news-body-content h1 {
     font-size: 1.6em;
   }
   .display-2 {
     font-size: 1.43em;
   }
-  .display-3 {
+  .display-3, .news-body-content h2 {
     font-size: 1.34em;
   }
   .display-4 {
@@ -250,13 +250,13 @@
   .display-6 {
     font-size: 1.1em;
   }
-  .display-7 {
+  .display-7, .news-body-content p, .news-body-content li {
     font-size: 1.03em;
   }
   .display-8 {
     font-size: .96em;
   }
-  .display-9 {
+  .display-9, .news-body-content figcaption {
     font-size: .9em;
   }
   .display-10 {
@@ -268,13 +268,13 @@
 }
 
 @media (max-width: 568px) {
-  .display-1 {
+  .display-1, .news-body-content h1 {
     font-size: 1.55em;
   }
   .display-2 {
     font-size: 1.39em;
   }
-  .display-3 {
+  .display-3, .news-body-content h2 {
     font-size: 1.3em;
   }
   .display-4 {
@@ -286,25 +286,25 @@
   .display-6 {
     font-size: 1.06em;
   }
-  .display-7 {
+  .display-7, .news-body-content p, .news-body-content li {
     font-size: 1.01em;
   }
   .display-8 {
     font-size: .94em;
   }
-  .display-9 {
+  .display-9, .news-body-content figcaption {
     font-size: .88em;
   }
 }
 
 @media (max-width: 468px) {
-  .display-1 {
+  .display-1, .news-body-content h1 {
     font-size: 1.5em;
   }
   .display-2 {
     font-size: 1.34em;
   }
-  .display-3 {
+  .display-3, .news-body-content h2 {
     font-size: 1.26em;
   }
   .display-4 {
@@ -316,25 +316,25 @@
   .display-6 {
     font-size: 1.03em;
   }
-  .display-7 {
+  .display-7, .news-body-content p, .news-body-content li {
     font-size: .98em;
   }
   .display-8 {
     font-size: .92em;
   }
-  .display-9 {
+  .display-9, .news-body-content figcaption {
     font-size: .87em;
   }
 }
 
 @media (max-width: 368px) {
-  .display-1 {
+  .display-1, .news-body-content h1 {
     font-size: 1.45em;
   }
   .display-2 {
     font-size: 1.3em;
   }
-  .display-3 {
+  .display-3, .news-body-content h2 {
     font-size: 1.18em;
   }
   .display-4 {
@@ -346,13 +346,13 @@
   .display-6 {
     font-size: 1em;
   }
-  .display-7 {
+  .display-7, .news-body-content p, .news-body-content li {
     font-size: .95em;
   }
   .display-8 {
     font-size: .9em;
   }
-  .display-9 {
+  .display-9, .news-body-content figcaption {
     font-size: .85em;
   }
   .display-10 {

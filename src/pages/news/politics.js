@@ -1,5 +1,6 @@
 import React, {useContext, useEffect} from 'react'
 import {AppData} from '../../utils/context/contextapi'
+import Header from '../../components/Header/Header'
 import Head from 'next/head'
 import {getData} from '../../utils/api/apis'
 import LayoutTwo from '../../components/Layouts/LayoutTwo'
@@ -23,35 +24,31 @@ export default function Politics({data}) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Spinner spin={isSpin.spin}/>
-      <header className='content-center'>
-        <div className="content-center header-wrapper">
-          <h1 className="">Header</h1>
-        </div>
-      </header>
+      <Header />
       <main className='content-center news-body'>
         <div className="content-center body-container">
           <LayoutSix 
-            link={false}
+            link='/politics/us-politics'
             theme='theme-five-a'
             textHeader='US'
             data={data.item1}/>
           <LayoutFour 
             theme='theme-four-b'
-            link={false}
+            link='/politics/uk-politics'
             textHeader='UK'
             data={data.item2}/>
           <LayoutFive 
             theme='theme-three-b'
-            link={false}
+            link='/politics/australia-politics'
             textHeader='Australia'
             data={data.item3}/>
           <LayoutThree 
             theme='theme-two-b'
-            link={false}
+            link='/politics/asia-politics'
             textHeader='Asia'
             data={data.item4}/>
           <LayoutTwo 
-            link={false}
+            link='/politics/africa-politics'
             theme='theme-one-b'
             textHeader='Africa'
             data={data.item5}/>

@@ -9,6 +9,11 @@ export function AppsDataContext (props) {
     isDone: false
   })
 
+  const [news, setNews] = useState({
+    isSet: false,
+    news: {}
+  })
+
   function setSpinning (event, page){
     if(event === 'click'){
       updateState(true, page, true)
@@ -25,8 +30,20 @@ export function AppsDataContext (props) {
     setSpin({spin: a, page: b, isDone: c})
   }
 
+
+  function setNewsItem(set ,val) {
+    if(set){
+      setNews({isSet: true, news: val})
+    }
+  }
+
   return (
-    <AppData.Provider value={{ isSpin, setSpinning }}>
+    <AppData.Provider value={{ 
+      isSpin, 
+      setSpinning,
+      news,
+      setNewsItem
+    }}>
       {props.children}
     </AppData.Provider>
   )

@@ -12,7 +12,7 @@ export async function newsData(path) {
 }
 
 // get data from the api
-async function getdata(url){
+export async function getdata(url){
   let data;
   await axios.get(url)
     .then(res => {

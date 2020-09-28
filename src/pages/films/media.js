@@ -1,5 +1,6 @@
 import React, {useContext, useEffect} from 'react'
 import {AppData} from '../../utils/context/contextapi'
+import Header from '../../components/Header/Header'
 import Head from 'next/head'
 import {getData} from '../../utils/api/apis'
 import LayoutSix from '../../components/Layouts/LayoutSix'
@@ -22,30 +23,26 @@ export default function Media({data}) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Spinner spin={isSpin.spin}/>
-      <header className='content-center'>
-        <div className="content-center header-wrapper">
-          <h1 className="">Header</h1>
-        </div>
-      </header>
+      <Header />
       <main className='content-center news-body'>
         <div className="content-center body-container">
           <LayoutFive
-            link={false}
+            link='films-media/media-news'
             theme='theme-five-a'
             textHeader='Media'
             data={data.item1}/>
           <LayoutFour
-            link={false}
+            link='films-media/television'
             theme='theme-one-b'
             textHeader='Television'
             data={data.item2}/>
           <LayoutOne
-            link={false}
+            link='films-media/digital-media'
             theme='theme-two-a'
             textHeader='Digital Media'
             data={data.item3}/>
           <LayoutSix
-            link={false}
+            link='films-media/social-media'
             theme='theme-one-b'
             textHeader='Social Media'
             data={data.item4}/>

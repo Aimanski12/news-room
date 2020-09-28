@@ -1,5 +1,6 @@
 import React, {useContext, useEffect} from 'react'
 import {AppData} from '../../utils/context/contextapi'
+import Header from '../../components/Header/Header'
 import Head from 'next/head'
 import {getData} from '../../utils/api/apis'
 import LayoutTwo from '../../components/Layouts/LayoutTwo'
@@ -23,40 +24,36 @@ export default function Science({data}) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Spinner spin={isSpin.spin}/>
-      <header className='content-center'>
-        <div className="content-center header-wrapper">
-          <h1 className="">Header</h1>
-        </div>
-      </header>
+      <Header />
       <main className='content-center news-body'>
         <div className="content-center body-container">
           <LayoutTwo 
             theme='theme-three-b'
-            link={false}
+            link='/science/space-exploraion'
             textHeader='Space Exploration'
             data={data.item1}/>
           <LayoutFour 
             theme='theme-four-b'
-            link={false}
+            link='/science/medical-research'
             textHeader='Medical Research'
             data={data.item2}/>
           <LayoutFive 
             theme='theme-five-b'
-            link={false}
+            link='/science/zoology'
             textHeader='Zoology'
             data={data.item3}/>
           <LayoutSix 
-            link={false}
+            link='/science/chemistry'
             theme='theme-one-b'
             textHeader='Chemistry'
             data={data.item4}/>
           <LayoutThree 
             theme='theme-two-b'
-            link={false}
+            link='/science/neurology'
             textHeader='Neurology'
             data={data.item5}/>
           <LayoutTwo
-            link={false}
+            link='/science/diseases'
             theme='theme-three-b'
             textHeader='Diseases'
             data={data.item6}/>

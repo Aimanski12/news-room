@@ -1,0 +1,35 @@
+{
+  "links": [
+    {
+      "name": "World",
+      "link": "/"
+    },
+    {
+      "name": "News",
+      "link": "/news"
+    },
+    {
+      "name": "Money",
+      "link": "/money"
+    },
+    {
+      "name": "Sports",
+      "link": "/sports"
+    },
+    {
+      "name": "Culture",
+      "link": "/cultures"
+    },
+    {
+      "name": "Lifestyle",
+      "link": "/lifestyles"
+    },
+    {
+      "name": "Films",
+      "link": "/films"
+    },
+    {
+      "name": "More"
+    }
+  ]
+}

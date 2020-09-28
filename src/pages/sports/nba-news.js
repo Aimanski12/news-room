@@ -1,5 +1,6 @@
 import React, {useContext, useEffect} from 'react'
 import {AppData} from '../../utils/context/contextapi'
+import Header from '../../components/Header/Header'
 import Head from 'next/head'
 import {getData} from '../../utils/api/apis'
 import LayoutThree from '../../components/Layouts/LayoutThree'
@@ -21,26 +22,22 @@ export default function Nba({data}) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Spinner spin={isSpin.spin}/>
-      <header className='content-center'>
-        <div className="content-center header-wrapper">
-          <h1 className="">Header</h1>
-        </div>
-      </header>
+      <Header />
       <main className='content-center news-body'>
         <div className="content-center body-container">
           <LayoutSix
-            link={false}
+            link='/sports/nba-news'
             theme='theme-two-b'
             textHeader='This Month'
             data={data.item1}/>
           <LayoutTwo
             theme='theme-three-b'
-            link={false}
+            link='/sports/nba-news'
             textHeader='Last Month'
             data={data.item2}/>
           <LayoutThree 
             theme='theme-four-a'
-            link={false}
+            link='/sports/nba-news'
             textHeader='Previews Month'
             data={data.item3}/>
         </div>

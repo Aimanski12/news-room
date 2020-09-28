@@ -1,5 +1,6 @@
 import React, {useContext, useEffect} from 'react'
 import {AppData} from '../../utils/context/contextapi'
+import Header from '../../components/Header/Header'
 import Head from 'next/head'
 import {getData} from '../../utils/api/apis'
 import LayoutOne from '../../components/Layouts/LayoutOne'
@@ -24,45 +25,41 @@ export default function Technology({data}) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Spinner spin={isSpin.spin}/>
-      <header className='content-center'>
-        <div className="content-center header-wrapper">
-          <h1 className="">Header</h1>
-        </div>
-      </header>
+      <Header />
       <main className='content-center news-body'>
         <div className="content-center body-container">
           <LayoutTwo 
             theme='theme-three-a'
-            link={false}
+            link='/technology/gadgets'
             textHeader='Gadgets'
             data={data.item1}/>
           <LayoutFour 
             theme='theme-four-b'
-            link={false}
+            link='/technology/artificial-intelligence'
             textHeader='Artificial Intelligence'
             data={data.item2}/>
           <LayoutFive 
             theme='theme-five-b'
-            link={false}
+            link='/technology/gamming'
             textHeader='Gaming'
             data={data.item3}/>
           <LayoutSix 
-            link={false}
+            link='/technology/smart-phones'
             theme='theme-one-b'
             textHeader='Smart Phones'
             data={data.item4}/>
           <LayoutThree 
             theme='theme-two-a'
-            link={false}
+            link='/technology/computing'
             textHeader='Computing'
             data={data.item5}/>
           <LayoutOne 
-            link={false}
+            link='/technology/softwares'
             theme='theme-three-b'
             textHeader='Softwares'
             data={data.item6}/>
           <LayoutOne 
-            link={false}
+            link='/technology/e-finance'
             theme='theme-four-b'
             textHeader='E-Finance'
             data={data.item7}/>

@@ -1,5 +1,6 @@
 import React, {useContext, useEffect} from 'react'
 import {AppData} from '../../utils/context/contextapi'
+import Header from '../../components/Header/Header'
 import Head from 'next/head'
 import {getData} from '../../utils/api/apis'
 import LayoutSix from '../../components/Layouts/LayoutSix'
@@ -22,30 +23,26 @@ export default function Music({data}) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Spinner spin={isSpin.spin}/>
-      <header className='content-center'>
-        <div className="content-center header-wrapper">
-          <h1 className="">Header</h1>
-        </div>
-      </header>
+      <Header />
       <main className='content-center news-body'>
         <div className="content-center body-container">
           <LayoutFour
-            link={false}
+            link='/music/music-news'
             theme='theme-four-a'
             textHeader='Music'
             data={data.item1}/>
           <LayoutThree
-            link={false}
+            link='/music/clubs'
             theme='theme-five-b'
             textHeader='Clubs'
             data={data.item2}/>
           <LayoutSix
-            link={false}
+            link='/music/jazz'
             theme='theme-one-a'
             textHeader='Jazz'
             data={data.item3}/>
           <LayoutFive
-            link={false}
+            link='/music/pop-rock'
             theme='theme-two-b'
             textHeader='Pop-Rock'
             data={data.item4}/>
