@@ -1,5 +1,6 @@
 
 import anime from 'animejs'
+import moment from 'moment'
 
 // function to show the submenu list when 'more' menu is clicked
 export function showSubMenu () {
@@ -52,4 +53,23 @@ export function showBars(btn) {
 export function setUrl (url){
   const a = url.split('/')
   return `${a[a.length - 1]}`
+}
+
+export function formatTime(time){
+  let t;
+  const now = moment().toString()
+  const today = moment(now).format('MMMM DD, YYYY')
+  const newsDate = moment(time).format('MMMM DD, YYYY')
+  if(today === newsDate) {
+    t = moment(time).format('dddd, MMMM DD, YYYY, hh:mm a')
+  } else {
+    t = moment(time).format('MMMM DD, YYYY, dddd')
+  }
+  return t
+}
+
+
+export function formatText(text){
+  const a = text.split(' ')
+  return a.join('-')
 }

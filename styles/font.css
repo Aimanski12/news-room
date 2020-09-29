@@ -44,7 +44,7 @@
   line-height: 1.05em;
 }
 
-.display-7, .news-body-content p, .news-body-content li {
+.display-7, .news-body-content p {
   font-size: 1.2em;
   line-height: 1.05em;
 }
@@ -55,7 +55,7 @@
   line-height: 1.04em;
 
 }
-.display-9, .news-body-content figcaption {
+.display-9, .news-body-content figcaption, .news-body-content li {
   letter-spacing: -0.8px;
   font-size: 1em;
 }
@@ -88,13 +88,13 @@
   .display-6 {
     font-size: 1.26em;
   }
-  .display-7, .news-body-content p, .news-body-content li {
+  .display-7, .news-body-content p {
     font-size: 1.17em;
   }
   .display-8 {
     font-size: 1.07em;
   }
-  .display-9, .news-body-content figcaption {
+  .display-9, .news-body-content figcaption, .news-body-content li  {
     font-size: .98em;
   }
 }
@@ -118,13 +118,13 @@
   .display-6 {
     font-size: 1.23em;
   }
-  .display-7, .news-body-content p, .news-body-content li {
+  .display-7, .news-body-content p {
     font-size: 1.14em;
   }
   .display-8 {
     font-size: 1.05em;
   }
-  .display-9, .news-body-content figcaption {
+  .display-9, .news-body-content figcaption, .news-body-content li  {
     font-size: .96em;
   }
   .display-10 {
@@ -154,13 +154,13 @@
   .display-6 {
     font-size: 1.2em;
   }
-  .display-7 {
+  .display-7, .news-body-content p {
     font-size: 1.11em;
   }
   .display-8 {
     font-size: 1.03em;
   }
-  .display-9, .news-body-content figcaption {
+  .display-9, .news-body-content figcaption, .news-body-content li  {
     font-size: .95em;
   }
 }
@@ -184,13 +184,13 @@
   .display-6 {
     font-size: 1.16em;
   }
-  .display-7, .news-body-content p, .news-body-content li {
+  .display-7, .news-body-content p {
     font-size: 1.09em;
   }
   .display-8 {
     font-size: 1.01em;
   }
-  .display-9, .news-body-content figcaption {
+  .display-9, .news-body-content figcaption, .news-body-content li  {
     font-size: .93em;
   }
   .display-10 {
@@ -220,13 +220,13 @@
   .display-6 {
     font-size: 1.13em;
   }
-  .display-7, .news-body-content p, .news-body-content li {
+  .display-7, .news-body-content p {
     font-size: 1.09em;
   }
   .display-8 {
     font-size: .99em;
   }
-  .display-9, .news-body-content figcaption {
+  .display-9, .news-body-content figcaption, .news-body-content li  {
     font-size: .92em;
   }
 }
@@ -250,13 +250,13 @@
   .display-6 {
     font-size: 1.1em;
   }
-  .display-7, .news-body-content p, .news-body-content li {
+  .display-7, .news-body-content p {
     font-size: 1.03em;
   }
   .display-8 {
     font-size: .96em;
   }
-  .display-9, .news-body-content figcaption {
+  .display-9, .news-body-content figcaption, .news-body-content li  {
     font-size: .9em;
   }
   .display-10 {
@@ -286,13 +286,13 @@
   .display-6 {
     font-size: 1.06em;
   }
-  .display-7, .news-body-content p, .news-body-content li {
+  .display-7, .news-body-content p {
     font-size: 1.01em;
   }
   .display-8 {
     font-size: .94em;
   }
-  .display-9, .news-body-content figcaption {
+  .display-9, .news-body-content figcaption, .news-body-content li  {
     font-size: .88em;
   }
 }
@@ -316,13 +316,13 @@
   .display-6 {
     font-size: 1.03em;
   }
-  .display-7, .news-body-content p, .news-body-content li {
+  .display-7, .news-body-content p {
     font-size: .98em;
   }
   .display-8 {
     font-size: .92em;
   }
-  .display-9, .news-body-content figcaption {
+  .display-9, .news-body-content figcaption, .news-body-content li  {
     font-size: .87em;
   }
 }
@@ -346,13 +346,13 @@
   .display-6 {
     font-size: 1em;
   }
-  .display-7, .news-body-content p, .news-body-content li {
+  .display-7, .news-body-content p {
     font-size: .95em;
   }
   .display-8 {
     font-size: .9em;
   }
-  .display-9, .news-body-content figcaption {
+  .display-9, .news-body-content figcaption, .news-body-content li  {
     font-size: .85em;
   }
   .display-10 {

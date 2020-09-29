@@ -1,11 +1,11 @@
 import React from 'react'
 
-function ss() {
+function zz() {
   return (
     <div>
-      asd
+      
     </div>
   )
 }
 
-export default ss
+export default zz

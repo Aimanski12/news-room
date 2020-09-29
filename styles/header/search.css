@@ -52,8 +52,13 @@
 }
 
 .search-input-wide button:hover {
+  cursor: pointer;
   background: #F1E043;
   transition: all  0.2s ease-in
+}
+
+.search-input-wide button:focus {
+  outline: none;
 }
 
 .search-input-wide svg {

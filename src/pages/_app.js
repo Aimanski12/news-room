@@ -33,9 +33,13 @@ import '../../styles/footer/bottom.css'
 
 // news body
 import '../../styles/newsbody/newsbody.css'
+import '../../styles/newsbody/searchresults.css'
 
 // spinner
 import '../../styles/spinner/spinner.css'
+
+// not found
+import '../../styles/notfound/notfound.css'
 
 // data context 
 import {AppsDataContext} from '../utils/context/contextapi'

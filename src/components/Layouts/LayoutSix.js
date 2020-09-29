@@ -4,7 +4,7 @@ import parse from 'html-react-parser'
 import Link from 'next/link'
 import HeaderLink from '../Link/Link'
 import {setUrl} from '../../utils/common/common'
-import Clock from '../../components/Svg/clock'
+// import Clock from '../../components/Svg/clock'
 
 function LayooutSix(props) {
    const {setSpinning, setNewsItem} = useContext(AppData)
@@ -26,7 +26,7 @@ function LayooutSix(props) {
             <p className="display-7 text-head">{data[0].webTitle}</p>
             <div>
               <span className='display-9 text-head'>{parse(data[0].fields.trailText)}</span>
-              <span className='display-11 text-cap timer'><Clock/>July 2020</span>
+              {/* <span className='display-11 text-cap timer'><Clock/>July 2020</span> */}
             </div>
           </div>
         </a>
@@ -44,7 +44,7 @@ function LayooutSix(props) {
             <p className="display-7 text-head">{data[1].webTitle}</p>
             <div>
               <span className='display-9 text-head'>{parse(data[1].fields.trailText)}</span>
-              <span className='display-11 text-cap timer'><Clock/>July 2020</span>
+              {/* <span className='display-11 text-cap timer'><Clock/>July 2020</span> */}
             </div>
           </div>
         </a>
@@ -60,7 +60,7 @@ function LayooutSix(props) {
           <img src={data[2].fields.thumbnail} alt=""/>
           <div className="text-wrapper">
             <p className="display-8 text-head">{parse(data[2].webTitle)}</p>
-            <span className='display-11 text-cap timer'><Clock/>July 2020</span>
+            {/* <span className='display-11 text-cap timer'><Clock/>July 2020</span> */}
           </div>
         </a>
       </Link>
@@ -75,7 +75,7 @@ function LayooutSix(props) {
           <img src={data[3].fields.thumbnail} alt=""/>
           <div className="text-wrapper">
             <p className="display-8 text-head">{data[3].webTitle}</p>
-            <span className='display-11 text-cap timer'><Clock/>July 2020</span>
+            {/* <span className='display-11 text-cap timer'><Clock/>July 2020</span> */}
           </div>
         </a>
       </Link>
@@ -90,7 +90,7 @@ function LayooutSix(props) {
           <img src={data[4].fields.thumbnail} alt=""/>
           <div className="text-wrapper">
             <p className="display-8 text-head">{data[4].webTitle}</p>
-            <span className='display-11 text-cap timer'><Clock/>July 2020</span>
+            {/* <span className='display-11 text-cap timer'><Clock/>July 2020</span> */}
           </div>
         </a>
       </Link>
@@ -105,7 +105,7 @@ function LayooutSix(props) {
           <img src={data[5].fields.thumbnail} alt=""/>
           <div className="text-wrapper">
             <p className="display-8 text-head">{data[5].webTitle}</p>
-            <span className='display-11 text-cap timer'><Clock/>July 2020</span>
+            {/* <span className='display-11 text-cap timer'><Clock/>July 2020</span> */}
           </div>
         </a>
       </Link>

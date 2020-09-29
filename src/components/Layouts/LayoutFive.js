@@ -4,7 +4,7 @@ import parse from 'html-react-parser'
 import Link from 'next/link'
 import HeaderLink from '../Link/Link'
 import {setUrl} from '../../utils/common/common'
-import Clock from '../../components/Svg/clock'
+// import Clock from '../../components/Svg/clock'
 
 function LayoutFive(props) {
    const {setSpinning, setNewsItem} = useContext(AppData)
@@ -24,7 +24,7 @@ function LayoutFive(props) {
           <img src={data[0].fields.thumbnail} alt=""/>
           <div className="text-wrapper text-flex-a">
             <p className="display-9 text-head">{parse(data[0].fields.trailText)}</p>
-            <span className='display-11 text-cap timer-5'><Clock/>July 2020</span>
+            {/* <span className='display-11 text-cap timer-5'><Clock/>July 2020</span> */}
           </div>
         </a>
       </Link>
@@ -39,7 +39,7 @@ function LayoutFive(props) {
           <img src={data[1].fields.thumbnail} alt=""/>
           <div className="text-wrapper text-flex-a">
             <p className="display-9 text-head">{parse(data[1].fields.trailText)}</p>
-            <span className='display-11 text-cap timer-5'><Clock/>July 2020</span>
+            {/* <span className='display-11 text-cap timer-5'><Clock/>July 2020</span> */}
           </div>
         </a>
       </Link>
@@ -54,7 +54,7 @@ function LayoutFive(props) {
           <img src={data[2].fields.thumbnail} alt=""/>
           <div className="text-wrapper text-flex-a">
             <p className="display-9 text-head">{parse(data[2].fields.trailText)}</p>
-            <span className='display-11 text-cap timer-5'><Clock/>July 2020</span>
+            {/* <span className='display-11 text-cap timer-5'><Clock/>July 2020</span> */}
           </div>
         </a>
       </Link>
@@ -69,7 +69,7 @@ function LayoutFive(props) {
           <img src={data[3].fields.thumbnail} alt=""/>
           <div className="text-wrapper text-flex-a">
             <p className="display-9 text-head">{parse(data[3].fields.trailText)}</p>
-            <span className='display-11 text-cap timer-5'><Clock/>July 2020</span>
+            {/* <span className='display-11 text-cap timer-5'><Clock/>July 2020</span> */}
           </div>
         </a>
       </Link>
@@ -83,7 +83,7 @@ function LayoutFive(props) {
         <a onClick={()=>clickToPage(data[4])}>
           <div className="text-wrapper">
             <p className="display-9 text-head">{parse(data[4].fields.trailText)}</p>
-            <span className='display-11 text-cap timer-5'><Clock/>July 2020</span>
+            {/* <span className='display-11 text-cap timer-5'><Clock/>July 2020</span> */}
           </div>
         </a>
       </Link>
@@ -97,7 +97,7 @@ function LayoutFive(props) {
         <a onClick={()=>clickToPage(data[5])}>
           <div className="text-wrapper">
             <p className="display-9 text-head">{parse(data[5].fields.trailText)}</p>
-            <span className='display-11 text-cap timer-5'><Clock/>July 2020</span>
+            {/* <span className='display-11 text-cap timer-5'><Clock/>July 2020</span> */}
           </div>
         </a>
       </Link>
@@ -111,7 +111,7 @@ function LayoutFive(props) {
         <a onClick={()=>clickToPage(data[6])}>
           <div className="text-wrapper">
             <p className="display-9 text-head">{parse(data[6].fields.trailText)}</p>
-            <span className='display-11 text-cap timer-5'><Clock/>July 2020</span>
+            {/* <span className='display-11 text-cap timer-5'><Clock/>July 2020</span> */}
           </div>
         </a>
       </Link>
@@ -125,7 +125,7 @@ function LayoutFive(props) {
         <a onClick={()=>clickToPage(data[7])}>
           <div className="text-wrapper">
             <p className="display-9 text-head">{parse(data[7].fields.trailText)}</p>
-            <span className='display-11 text-cap timer-5'><Clock/>July 2020</span>
+            {/* <span className='display-11 text-cap timer-5'><Clock/>July 2020</span> */}
           </div>
         </a>
       </Link>

@@ -5,8 +5,9 @@ import {moneyall, money, business, investment, realestate, work} from './moneyda
 import {lifestyleall, lifestyle, fashion, books, food, travel} from './lifestyle'
 import {filmAll, film, media, stage, music} from './films'
 import {cultureAll, culture, society, art} from './culture'
+import {searchNews} from './search'
 
-export async function getData(endpoint){
+export async function getData(endpoint, query){
 
   let data;
   switch(endpoint) {
@@ -93,6 +94,8 @@ export async function getData(endpoint){
     case 'society': data = await society();
       break
     case 'art': data = await art();
+      break
+    case 'search': data = await searchNews(query);
       break
   }
   

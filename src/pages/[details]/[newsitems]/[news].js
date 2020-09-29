@@ -1,11 +1,11 @@
-import React, {useContext, useEffect} from 'react'
+import React, {useContext, useEffect, Fragment} from 'react'
 import {useRouter} from 'next/router'
 import {AppData} from '../../../utils/context/contextapi'
 import Head from 'next/head'
 import Header from '../../../components/Header/Header'
 import Footer from '../../../components/Footer/Footer'
 import Spinner from '../../../components/Spinner/Spinner'
-import {setUrl} from '../../../utils/common/common'
+import {setUrl, formatTime} from '../../../utils/common/common'
 import parse from 'html-react-parser'
 
 function news() {
@@ -32,14 +32,17 @@ function news() {
   ) : null
 
   let newsHeader = news.isSet ? (
-    <h1 className='news-text-header'>{parse(news.news.fields.headline)}</h1>
+    <Fragment>
+      <h1 className='news-text-header'>{parse(news.news.fields.headline)}</h1>
+      <span className='display-9 writter'>by: {news.news.fields.byline}</span>
+      <span className='display-9 news-time'>
+        {formatTime(news.news.fields.lastModified)}</span>
+    </Fragment>
   ) : null
 
   let newsImage = news.isSet ? (
     <img className='image-head' src={news.news.fields.thumbnail} alt=""/>
   ) : null
-
-  console.log(news.news)
 
   return (
     <div className='main-container'>

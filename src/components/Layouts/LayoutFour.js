@@ -15,7 +15,7 @@ function LayoutFour(props) {
   }
 
   let item1 = data[0] ? (
-    <div className="news-item item-1">``
+    <div className="news-item item-1">
       <Link 
         href={`/[details]/[newsitems]/[news]`} 
         as={`${props.link}/${setUrl(data[0].id)}`}>
