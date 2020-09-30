@@ -19,7 +19,7 @@ export default function Nba({data}) {
     <div className='main-container'>
       <Head>
         <title>News-Box | NBA News</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/logo.ico" />
       </Head>
       <Spinner spin={isSpin.spin}/>
       <Header />

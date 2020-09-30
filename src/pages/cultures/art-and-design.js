@@ -19,7 +19,7 @@ export default function Art({data}) {
     <div className='main-container'>
       <Head>
         <title>News-Box | Arts and Design</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/logo.ico" />
       </Head>
       <Spinner spin={isSpin.spin}/>
       <Header />

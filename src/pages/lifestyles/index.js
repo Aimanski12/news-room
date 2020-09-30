@@ -21,7 +21,7 @@ export default function Lifestyles({data}) {
     <div className='main-container'>
       <Head>
         <title>News-Box | Lifestyle News</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/logo.ico" />
       </Head>
       <Spinner spin={isSpin.spin}/>
       <Header />

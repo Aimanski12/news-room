@@ -14,6 +14,7 @@ import Spinner from '../components/Spinner/Spinner'
 
 export default function World({data}) {
   const {setSpinning, isSpin} = useContext(AppData)
+  
   useEffect(()=>{
     setSpinning('loaded', 'World')
   })
@@ -22,7 +23,7 @@ export default function World({data}) {
     <div className='main-container'>
       <Head>
         <title>News-Box | World</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/logo.ico" />
       </Head>
 
       <Spinner spin={isSpin.spin}/>

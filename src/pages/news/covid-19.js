@@ -20,7 +20,7 @@ export default function Covid({data}) {
     <div className='main-container'>
       <Head>
         <title>News-Box | Covid-19</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/logo.ico" />
       </Head>
       <Spinner spin={isSpin.spin}/>
       <Header />

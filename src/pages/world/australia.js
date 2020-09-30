@@ -20,7 +20,7 @@ export default function Australia({data}) {
     <div className='main-container'>
       <Head>
         <title>News-Box | Australia News</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/logo.ico" />
       </Head>
       <Spinner spin={isSpin.spin}/>
       <Header />

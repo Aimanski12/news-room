@@ -21,7 +21,7 @@ export default function Environment({data}) {
     <div className='main-container'>
       <Head>
         <title>News-Box | Environment</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/logo.ico" />
       </Head>
       <Spinner spin={isSpin.spin}/>
       <Header />

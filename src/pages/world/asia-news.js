@@ -20,7 +20,7 @@ export default function Asia({data}) {
     <div className='main-container'>
       <Head>
         <title>News-Box | Asia News</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/logo.ico" />
       </Head>
       <Spinner spin={isSpin.spin}/>
       <Header />
