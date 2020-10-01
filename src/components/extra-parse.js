@@ -3,7 +3,6 @@ import parse from 'html-react-parser'
 
 function News(props) {
   let data = props.data
-  // console.log(data)
 
   const items = data.map((d, i) =>{
     return (
@@ -13,8 +12,6 @@ function News(props) {
     <p>{parse(d.fields.trailText)}</p>
     </div> )
   })
-
-
 
   return (
     <div className="container">

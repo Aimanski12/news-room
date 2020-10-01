@@ -13,7 +13,7 @@ import Spinner from '../../components/Spinner/Spinner'
 export default function Films({data}) {
   const {setSpinning, isSpin} = useContext(AppData)
   useEffect(()=>{
-    setSpinning('loaded', 'Films')
+    setSpinning('loaded', 'Films', 'films-home')
   })
   
 

@@ -16,7 +16,7 @@ export default function World({data}) {
   const {setSpinning, isSpin} = useContext(AppData)
   
   useEffect(()=>{
-    setSpinning('loaded', 'World')
+    setSpinning('loaded', 'World', 'Home')
   })
 
   return (

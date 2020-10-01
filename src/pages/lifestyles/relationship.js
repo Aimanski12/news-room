@@ -13,7 +13,7 @@ import Spinner from '../../components/Spinner/Spinner'
 export default function Lifestyle({data}) {
   const {setSpinning, isSpin} = useContext(AppData)
   useEffect(()=>{
-    setSpinning('loaded', 'Relationship')
+    setSpinning('loaded', 'Relationship', 'lifestyle-relationships')
   })
 
   return (

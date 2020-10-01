@@ -12,7 +12,7 @@ import Spinner from '../../components/Spinner/Spinner'
 export default function Tennis({data}) {
   const {setSpinning, isSpin} = useContext(AppData)
   useEffect(()=>{
-    setSpinning('loaded', 'Tennis')
+    setSpinning('loaded', 'Tennis', 'sports-tennis-news')
   })
 
   return (

@@ -14,7 +14,7 @@ import Spinner from '../../components/Spinner/Spinner'
 export default function Politics({data}) {
   const {setSpinning, isSpin} = useContext(AppData)
   useEffect(()=>{
-    setSpinning('loaded', 'Politics')
+    setSpinning('loaded', 'Politics', 'news-politics')
   })
 
   return (

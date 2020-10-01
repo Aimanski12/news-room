@@ -12,7 +12,7 @@ import Spinner from '../../components/Spinner/Spinner'
 export default function Culture({data}) {
   const {setSpinning, isSpin} = useContext(AppData)
   useEffect(()=>{
-    setSpinning('loaded', 'Culture')
+    setSpinning('loaded', 'Culture', 'cultures-home')
   })
 
   return (

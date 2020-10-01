@@ -12,7 +12,7 @@ import Spinner from '../../components/Spinner/Spinner'
 export default function Golf({data}) {
   const {setSpinning, isSpin} = useContext(AppData)
   useEffect(()=>{
-    setSpinning('loaded', 'Golf')
+    setSpinning('loaded', 'Golf', 'sports-golf-news')
   })
 
   return (

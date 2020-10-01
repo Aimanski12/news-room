@@ -13,7 +13,7 @@ import Spinner from '../../components/Spinner/Spinner'
 export default function Covid({data}) {
   const {setSpinning, isSpin} = useContext(AppData)
   useEffect(()=>{
-    setSpinning('loaded', 'Covid-19')
+    setSpinning('loaded', 'Covid-19', 'news-covid-19')
   })
 
   return (

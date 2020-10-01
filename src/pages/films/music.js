@@ -13,7 +13,7 @@ import Spinner from '../../components/Spinner/Spinner'
 export default function Music({data}) {
   const {setSpinning, isSpin} = useContext(AppData)
   useEffect(()=>{
-    setSpinning('loaded', 'Music')
+    setSpinning('loaded', 'Music', 'films-music')
   })
 
   return (

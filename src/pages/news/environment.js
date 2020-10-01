@@ -14,7 +14,7 @@ import Spinner from '../../components/Spinner/Spinner'
 export default function Environment({data}) {
   const {setSpinning, isSpin} = useContext(AppData)
   useEffect(()=>{
-    setSpinning('loaded', 'Environment')
+    setSpinning('loaded', 'Environment', 'news-environment')
   })
 
   return (

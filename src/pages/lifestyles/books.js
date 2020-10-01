@@ -14,7 +14,7 @@ import Spinner from '../../components/Spinner/Spinner'
 export default function Books({data}) {
   const {setSpinning, isSpin} = useContext(AppData)
   useEffect(()=>{
-    setSpinning('loaded', 'Books')
+    setSpinning('loaded', 'Books', 'lifestyle-books')
   })
 
   return (

@@ -14,7 +14,7 @@ import Spinner from '../../components/Spinner/Spinner'
 export default function Business({data}) {
   const {setSpinning, isSpin} = useContext(AppData)
   useEffect(()=>{
-    setSpinning('loaded', 'Business')
+    setSpinning('loaded', 'Business', 'money-business')
   })
 
   return (

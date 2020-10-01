@@ -24,7 +24,7 @@ function news() {
       } 
     } 
 
-    setSpinning('loaded', 'Page')
+    setSpinning('loaded', 'Page', 'news-individual')
   })
 
   let newsBody = news.isSet ? (

@@ -14,7 +14,7 @@ import Spinner from '../../components/Spinner/Spinner'
 export default function Travel({data}) {
   const {setSpinning, isSpin} = useContext(AppData)
   useEffect(()=>{
-    setSpinning('loaded', 'Travel')
+    setSpinning('loaded', 'Travel', 'lifestyle-travel')
   })
 
   return (

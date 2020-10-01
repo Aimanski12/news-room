@@ -14,7 +14,7 @@ import Spinner from '../../components/Spinner/Spinner'
 export default function Science({data}) {
   const {setSpinning, isSpin} = useContext(AppData)
   useEffect(()=>{
-    setSpinning('loaded', 'Science')
+    setSpinning('loaded', 'Science','news-science')
   })
 
   return (

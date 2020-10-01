@@ -15,7 +15,7 @@ export default function News({data}) {
   const {isSpin, setSpinning, setNewsItem} = useContext(AppData)
 
   useEffect(() => {
-    setSpinning('loaded', 'Page')
+    setSpinning('loaded', 'Page', 'search-news')
   })
 
   function clickToPage (news){

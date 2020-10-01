@@ -13,7 +13,7 @@ import Spinner from '../../components/Spinner/Spinner'
 export default function Realestate({data}) {
   const {setSpinning, isSpin} = useContext(AppData)
   useEffect(()=>{
-    setSpinning('loaded', 'Realestate')
+    setSpinning('loaded', 'Realestate', 'money-realestate')
   })
 
   return (

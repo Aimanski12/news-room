@@ -15,7 +15,7 @@ import Spinner from '../../components/Spinner/Spinner'
 export default function Technology({data}) {
   const {setSpinning, isSpin} = useContext(AppData)
   useEffect(()=>{
-    setSpinning('loaded', 'Technology')
+    setSpinning('loaded', 'Technology', 'news-technology')
   })
 
   return (

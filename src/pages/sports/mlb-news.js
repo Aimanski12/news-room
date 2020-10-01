@@ -12,7 +12,7 @@ import Spinner from '../../components/Spinner/Spinner'
 export default function MLB({data}) {
   const {setSpinning, isSpin} = useContext(AppData)
   useEffect(()=>{
-    setSpinning('loaded', 'MLB')
+    setSpinning('loaded', 'MLB', 'sports-mlb-news')
   })
 
   return (

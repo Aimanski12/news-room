@@ -12,7 +12,7 @@ import Spinner from '../../components/Spinner/Spinner'
 export default function Soccer({data}) {
   const {setSpinning, isSpin} = useContext(AppData)
   useEffect(()=>{
-    setSpinning('loaded', 'Soccer')
+    setSpinning('loaded', 'Soccer', 'sports-soccer-news')
   })
 
   return (

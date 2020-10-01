@@ -13,7 +13,7 @@ import Spinner from '../../components/Spinner/Spinner'
 export default function Society({data}) {
   const {setSpinning, isSpin} = useContext(AppData)
   useEffect(()=>{
-    setSpinning('loaded', 'Society')
+    setSpinning('loaded', 'Society', 'cultures-society')
   })
 
   return (

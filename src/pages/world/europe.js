@@ -15,7 +15,7 @@ import Spinner from '../../components/Spinner/Spinner'
 export default function Europe({data}) {
   const {setSpinning, isSpin} = useContext(AppData)
   useEffect(()=>{
-    setSpinning('loaded', 'Europe')
+    setSpinning('loaded', 'Europe', 'world-europe')
   })
 
   return (

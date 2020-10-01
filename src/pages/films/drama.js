@@ -14,7 +14,7 @@ import Spinner from '../../components/Spinner/Spinner'
 export default function Drama({data}) {
   const {setSpinning, isSpin} = useContext(AppData)
   useEffect(()=>{
-    setSpinning('loaded', 'Drama')
+    setSpinning('loaded', 'Drama', 'films-drama')
   })
 
   return (

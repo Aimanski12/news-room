@@ -69,6 +69,11 @@ export function formatTime(time){
 }
 
 
+export function todayTime () {
+  const now = moment().toString()
+  return moment(now).format('dddd, MMMM DD, YYYY')
+}
+
 export function formatText(text){
   const a = text.split(' ')
   return a.join('-')

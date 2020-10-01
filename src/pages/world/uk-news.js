@@ -13,7 +13,7 @@ import Spinner from '../../components/Spinner/Spinner'
 export default function UkNews({data}) {
   const {setSpinning, isSpin} = useContext(AppData)
   useEffect(()=>{
-    setSpinning('loaded', 'UK')
+    setSpinning('loaded', 'UK', 'world-uk-news')
   })
 
   return (

@@ -12,7 +12,7 @@ import Spinner from '../../components/Spinner/Spinner'
 export default function Festival({data}) {
   const {setSpinning, isSpin} = useContext(AppData)
   useEffect(()=>{
-    setSpinning('loaded', 'Festivals')
+    setSpinning('loaded', 'Festivals', 'cultures-festivals')
   })
 
   return (

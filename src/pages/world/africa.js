@@ -13,7 +13,7 @@ import Spinner from '../../components/Spinner/Spinner'
 export default function Africa({data}) {
   const {setSpinning, isSpin} = useContext(AppData)
   useEffect(()=>{
-    setSpinning('loaded', 'Africa')
+    setSpinning('loaded', 'Africa', 'world-africa')
   })
 
   return (

@@ -13,7 +13,7 @@ import Spinner from '../../components/Spinner/Spinner'
 export default function Education({data}) {
   const {setSpinning, isSpin} = useContext(AppData)
   useEffect(()=>{
-    setSpinning('loaded', 'Education')
+    setSpinning('loaded', 'Education', 'news-education')
   })
 
   return (

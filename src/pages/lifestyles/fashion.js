@@ -14,7 +14,7 @@ import Spinner from '../../components/Spinner/Spinner'
 export default function Fashion({data}) {
   const {setSpinning, isSpin} = useContext(AppData)
   useEffect(()=>{
-    setSpinning('loaded', 'Fashion')
+    setSpinning('loaded', 'Fashion', 'lifestyle-fashion')
   })
 
   return (

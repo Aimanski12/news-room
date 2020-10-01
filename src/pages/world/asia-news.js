@@ -13,7 +13,7 @@ import Spinner from '../../components/Spinner/Spinner'
 export default function Asia({data}) {
   const {setSpinning, isSpin} = useContext(AppData)
  useEffect(() => {
-   setSpinning('loaded', 'Asia')
+   setSpinning('loaded', 'Asia', 'world-asia-news')
  })
 
   return (
