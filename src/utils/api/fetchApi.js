@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 export const qurl = `https://content.guardianapis.com/search?`
-export const api = 'api-key=your-API-KEY-here'
+export const api = 'api-key=8d8ca8cf-eb89-46b7-8b56-2a4ed8398362'
 const filters = `format=json&show-fields=all&show-references=&show-refinements=all&show-tags=all&order-by=newest&page-size=12`
 
 
