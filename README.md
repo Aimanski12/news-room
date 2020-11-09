@@ -2,14 +2,14 @@
 
 > I always wanted to build a news website as a pet project. I took this challenge and build this website in a different level. After doing a lot of research, I found [The Guardian API](https://open-platform.theguardian.com/) as a good api source to play around with and started building this project. The good thing about this api is that it doesn't need any apikey but it takes a little time to return data. 
 
-View this from your browser [live].(https://news-box.vercel.app)<br><br>
-View UI/UX design on [Behance](https://www.behance.net/gallery/107484257/News-Box)
+View this from your browser [live](https://news-box.vercel.app).<br><br>
+View UI/UX design on [Behance](https://www.behance.net/gallery/107484257/News-Box).
 
 ### screen shot
 
 <div float="left">
   <img src="https://github.com/Aimanski12/proj-resource/blob/master/libs/react/react25-news-room.gif" alt="screen shot">
-</div>
+</div><br><br>
 
 > Things I learned in this project;
   * How to serve audio files on the browser. 
@@ -21,7 +21,7 @@ View UI/UX design on [Behance](https://www.behance.net/gallery/107484257/News-Bo
   * How to query external APIs and store data locally.
   
 > References:
-  * [Comminutity Radio Station Index](https://fr1.api.radio-browser.info/)
+  * [The Guardian API](https://open-platform.theguardian.com/)
   * [GSAP Animation](https://greensock.com/gsap/)
   * [State Management](https://reactjs.org/docs/hooks-state.html)
   * [NextJS Router](https://nextjs.org/docs/api-reference/next/router)
@@ -41,7 +41,7 @@ After downloading the repo you can cd into the `proj-name` and then open up your
 $ npm install
 ```
 
-and then 
+and then after installation, visit [The Guardian API](https://open-platform.theguardian.com/) and signup for your APIkey. Then go to `/src/utils/api/fetchApi.js` and enter your APIkey on the config files. Then run the app with
 
 ```bash
 $ npm run dev
