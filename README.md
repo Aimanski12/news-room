@@ -8,7 +8,7 @@ View UI/UX design on [Behance](https://www.behance.net/gallery/107484257/News-Bo
 ### screen shot
 
 <div float="left">
-  <img src="https://github.com/Aimanski12/proj-resource/blob/master/libs/react/react25-news-room.gif" alt="screen shot">
+  <img src="https://github.com/Aimanski12/proj-resource/blob/master/libs/react/react25-news-box.gif" alt="screen shot">
 </div><br><br>
 
 > Things I learned in this project;
